@@ -23,11 +23,16 @@ nvm install node
 # 拉源码
 git clone https://github.com/thingsboard/thingsboard.git
 # 删除 license 信息， 在每个文件开头都有一段的
+cd thingsboard
 git checkout release-3.2
 mvn license:remove
+# 注释
+sed -i '675a\<--' pom.xml
+sed -i '738a\<--' pom.xml
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTMyNDY4NzYwLC0xMDUyODQwNzk5LDE0Mj
-g3NTU3MzcsLTEyNjExNDI4MDgsMTM3MzIyOTA2MF19
+eyJoaXN0b3J5IjpbLTQyNDI1OTM2Nyw5MzI0Njg3NjAsLTEwNT
+I4NDA3OTksMTQyODc1NTczNywtMTI2MTE0MjgwOCwxMzczMjI5
+MDYwXX0=
 -->
