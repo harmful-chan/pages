@@ -6,11 +6,16 @@ category: Thingsboard
 ---
 ## Quick Start
 ```shell
-# 安装java
+# 安装java 1.8 openjdk
 yum install -y java-1.8.0-openjdk-devel
+＃ 安装 maven 3.6.3
 wget https://apache.website-solution.net/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+tar -xvf apache-maven-3.6.3-bin.tar.gz
+cp -rf apache-maven-3.6.3 /usr/local/
+ ln -s /usr/local/apache-maven-3.6.3/bin/mvn /usr/bin/mvn
+ source /etc/profile
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzQyNTQ4MTgsMTM3MzIyOTA2MF19
+eyJoaXN0b3J5IjpbLTEyNzU3MTgwMDIsMTM3MzIyOTA2MF19
 -->
