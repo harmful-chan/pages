@@ -14,13 +14,16 @@ tar -xvf apache-maven-3.6.3-bin.tar.gz
 cp -rf apache-maven-3.6.3 /usr/local/
 ln -s /usr/local/apache-maven-3.6.3/bin/mvn /usr/bin/mvn # 软连接
 source /etc/profile ＃ 刷新环境变量 
-# 安装 nodejs
-# 安装 nvm， 要先翻墙不然获取不到脚本的
+# 安装 nodejs，以下步骤先翻墙哦
+# 安装 nvm
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-＃ 重新进入终端环境bian l
+＃ 重新进入终端环境变量才生效
+＃ 安装nodejs
+nvm install node
+
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTI2NjU0MSwtMTI2MTE0MjgwOCwxMz
+eyJoaXN0b3J5IjpbMTQyODc1NTczNywtMTI2MTE0MjgwOCwxMz
 czMjI5MDYwXX0=
 -->
