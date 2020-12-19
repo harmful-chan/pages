@@ -6,9 +6,11 @@ category: Thingsboard
 ---
 ## Quick Start
 ```shell
-
+# 安装java
+yum install -y java-1.8.0-openjdk-devel
+wget https://apache.website-solution.net/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1MDEzNjg4OSwxMzczMjI5MDYwXX0=
+eyJoaXN0b3J5IjpbLTE4MzQyNTQ4MTgsMTM3MzIyOTA2MF19
 -->
