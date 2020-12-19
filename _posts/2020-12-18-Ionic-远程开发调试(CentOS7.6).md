@@ -105,3 +105,6 @@ client是我们本地的命令行adb程序，daemon是运行在我们手机里�
 ![dwa1354d13wa135dwa3](http://img.hfzs.store/myblog/img/dwa1354d13wa135dwa3.gif)
 
 如果遇到**PANIC: Broken AVD system path. Check your ANDROID_SDK_ROOT value, AVD 错误 **在~/.android新建一个avd目录`mkdir -p ~/.android/avd`
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTUzMjg0ODQwNl19
+-->
