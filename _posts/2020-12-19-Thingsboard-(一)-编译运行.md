@@ -12,10 +12,10 @@ yum install -y java-1.8.0-openjdk-devel
 wget https://apache.website-solution.net/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
 tar -xvf apache-maven-3.6.3-bin.tar.gz
 cp -rf apache-maven-3.6.3 /usr/local/
- ln -s /usr/local/apache-maven-3.6.3/bin/mvn /usr/bin/mvn
- source /etc/profile
+ln -s /usr/local/apache-maven-3.6.3/bin/mvn /usr/bin/mvn # 软连接
+source /etc/profile ＃ 刷新环境变量 
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzU3MTgwMDIsMTM3MzIyOTA2MF19
+eyJoaXN0b3J5IjpbLTEyNjExNDI4MDgsMTM3MzIyOTA2MF19
 -->
