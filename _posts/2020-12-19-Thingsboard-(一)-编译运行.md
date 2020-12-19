@@ -26,13 +26,13 @@ git clone https://github.com/thingsboard/thingsboard.git
 cd thingsboard
 git checkout release-3.2
 mvn license:remove
-# 注释
-sed -i '675a\<--' pom.xml
-sed -i '738a\<--' pom.xml
+# 注释掉license插件
+sed -i '675a\<!--' pom.xml
+sed -i '738a\-->' pom.xml
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNDI1OTM2Nyw5MzI0Njg3NjAsLTEwNT
+eyJoaXN0b3J5IjpbMjExMTE5NTc1Niw5MzI0Njg3NjAsLTEwNT
 I4NDA3OTksMTQyODc1NTczNywtMTI2MTE0MjgwOCwxMzczMjI5
 MDYwXX0=
 -->
