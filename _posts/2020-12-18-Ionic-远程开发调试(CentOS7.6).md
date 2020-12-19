@@ -30,7 +30,7 @@ ionic混合开发其实是通过capacitor或者cordova这个组件来跟android 
 
 在centos7.6上epel源维护这我们需要的openjdk`yum list | grep openjdk`可以查看是否有这个包。
 
-![image-20200604150135444](http://img.hfzs.store/myblog/img/image-20200604150135444.png)
+![image-20200604150135444]({{ res_url }}/myblog/img/image-20200604150135444.png)
 
 我们需要1.8的openjdk和openjdk-devel，-devel带了一些调试用的工具，如果没装，后面回报**Javac is not found**之类的错误。安装`yum install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel`。好之之后`java -version 和 javac -version`有输出即可。yum 安装会帮我们把环境变量ue配好，比解压缩方便一丢丢。
 
@@ -63,7 +63,7 @@ $ export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/tools/bin
 
 `source /etc/profile`刷新一下环境变量就可以shell调用啦，接下来我们要安装一系列的工具`sdkmanager "build-tools;29.0.3"`安装完这个之后他会自动帮我们把其他也装上，没有的话也可以手动安装。版本我是选最新版的。蓝色框哪四个是必须的，platforms;根据你的安卓手机版本来
 
-![image-20200604154527556](http://img.hfzs.store/myblog/img/image-20200604154527556.png)
+![image-20200604154527556]({{ res_url }}/myblog/img/image-20200604154527556.png)
 
 接下来，我们把新安装好的文件的目录也加进环境变量中。然后`vi /etc/profile`刷新。
 
@@ -82,7 +82,7 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 
 我们要借助adb这个工具官方说明**https://developer.android.com/studio/command-line/adb**。adb分为三个部件，
 
-![image-20200604155219238](http://img.hfzs.store/myblog/img/image-20200604155219238.png)
+![image-20200604155219238]({{ res_url }}/myblog/img/image-20200604155219238.png)
 
 client是我们本地的命令行adb程序，daemon是运行在我们手机里自带的守护进程，server一般和client一起也是运行在本地的，也就是我们的centos7.6服务器。
 
@@ -90,11 +90,11 @@ client是我们本地的命令行adb程序，daemon是运行在我们手机里�
 
 在本地电脑安装adb（参考上面）**注意是本地电脑不是服务器电脑**。然后手机插上数据线，数据线另一头插进本地电脑蓝色的usb口，手机启动usb调试模式（不懂百度把，机型不一样方法不一样）。然后命令行运行`adb devices`查看你手机是否已经连上。（有一个device，没有的话想办法令这里检测得到再往下）
 
-![image-20200604160409854](http://img.hfzs.store/myblog/img/image-20200604160409854.png)
+![image-20200604160409854]({{ res_url }}/myblog/img/image-20200604160409854.png)
 
 接下来`adb tcpip 5555`启动监听5555端口。然后就可以拔掉usb，手机接入同一网段wifi，连接`adb connect 192.168.31.196:5555`ip改为自己手机的。然后`adb devices`会看到已经连接的手机。
 
-![image-20200604160850997](http://img.hfzs.store/myblog/img/image-20200604160850997.png)
+![image-20200604160850997]({{ res_url }}/myblog/img/image-20200604160850997.png)
 
 到这里，android的操作就完成了。
 
@@ -102,9 +102,9 @@ client是我们本地的命令行adb程序，daemon是运行在我们手机里�
 
 然后就可以用ionic直接把应用放到手机上了，执行`npm i -g cordova  native-run`和android交互用的组件，最后`ionic cordova run android --target=192.168.1.227:5555 --verbose`指定我们的远程设备运行。
 
-![dwa1354d13wa135dwa3](http://img.hfzs.store/myblog/img/dwa1354d13wa135dwa3.gif)
+![dwa1354d13wa135dwa3]({{ res_url }}/myblog/img/dwa1354d13wa135dwa3.gif)
 
 如果遇到**PANIC: Broken AVD system path. Check your ANDROID_SDK_ROOT value, AVD 错误 **在~/.android新建一个avd目录`mkdir -p ~/.android/avd`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzMjg0ODQwNl19
+eyJoaXN0b3J5IjpbNDc5MzQyOTg2XX0=
 -->
