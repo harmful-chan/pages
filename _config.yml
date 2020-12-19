@@ -24,6 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Harmful Chan | Blogs.
 baseurl: "/summary" # the subpath of your site, e.g. /blog
 url: "https://harmful-chan.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+res_url: "http://img.hfzs.store"
 github_username: harmful-chan
 highlighter: rouge
 svg:
