@@ -100,6 +100,7 @@ KillMode的类型：
     process: # 只杀主进程
     mixed:   # 主进程将收到SIGTERM信号，子进程收到SIGKILL信号
     none:    # 没有进程会被杀掉，只是执行服务的stop命令
+PrivateTmp=true # 表示给服务分配独立的临时空间
 TimeoutSec：停止命令执行前等待秒数。
 TimeoutStartSec：启动命令执行后等待秒数，超时停止。（0 关闭超时检测）
 TimeoutStopSec：停止命令执行后等待秒数，超时使用 SIGKILL 停止服务。
@@ -116,20 +117,21 @@ MountFlags：服务的 Mount Namespace 配置，会影响进程上下文中挂�
     private：服务使用独立的 Mount Namespace，它在启动时没有任何任何挂载点，服务对挂载点的操作也不会反映到主机上
 LimitCPU / LimitSTACK / LimitNOFILE / LimitNPROC 等：限制特定服务的系统资源量，例如 CPU、程序堆栈、文件句柄数量、子进程数量等，请看
 
- -> +-----------+    +----+
- -> |User->Group| -> |Nice| -> 
     +-----------+    +----+
- -> +---------------------------------+    +---------------+
+    |User->Group| -> |Nice| -> 
+    +-----------+    +----+
+    +---------------------------------+    +---------------+
  -> |RootDirectory -> WorkingDirectory| -> |EnvironmentFile| -> 
     +---------------------------------+    +---------------+
     +----+    +-------------------------------------------------------------+    
  -> |Type| -> |ExecStartPre -> ExecStart -> ExecStartPost -> TimeoutStartSec| -> 
     +----+    +-------------------------------------------------------------+ 
     +-------+    +------------------------+
- -> |Restart| -> |ExecReload -> RestartSec| 
+ -> |Restart| -> |ExecReload -> RestartSec| -> 
     +-------+    +------------------------+
-	+--------+    +-------------------------------------------------------+
-	|KillMode| -> |TimeoutSec -> ExecStop -> ExecStopPost -> TimeoutStopSec
+	+--------+    +--------------------------------------------------------+
+ -> |KillMode| -> |TimeoutSec -> ExecStop -> ExecStopPost -> TimeoutStopSec|
+    +--------+    +-------------------------------------------------------+
 ```
 
 [Install]字段描述
@@ -146,7 +148,7 @@ Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125)
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ0MDc3NjU0LC0yMDU1NDcxODA5LC0yND
+eyJoaXN0b3J5IjpbNDcwNTc5NDk4LC0yMDU1NDcxODA5LC0yND
 IyNzIzNjQsMTIzODU3MDQ0MywxNzk4NDUwOTU0LDMyODEzNDIx
 MywtMTA4MTEzMDQzOSwtMTI5NDYyOTQ5OSwtMTI3NzAxMzYxOC
 wxMjYxNzU2MTg5LDEyMTkyNDM5NjVdfQ==
