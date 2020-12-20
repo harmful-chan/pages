@@ -101,6 +101,8 @@ KillMode的类型：
     mixed:   # 主进程将收到SIGTERM信号，子进程收到SIGKILL信号
     none:    # 没有进程会被杀掉，只是执行服务的stop命令
 TimeoutSec：定义 Systemd 停止当前服务之前等待的秒数
+TimeoutStartSec：启动服务时等待的秒数，这一配置对于使用 Docker 容器而言显得尤为重要，因其第一次运行时可能需要下载镜像，严重延时会容易被 Systemd 误判为启动失败杀死。通常，对于这种服务，将此值指定为 0，从而关闭超时检测
+-   TimeoutStopSec：停止服务时的等待秒数，如果超过这个时间仍然没有停止，Systemd 会使用 SIGKILL 信号强行杀死服务的进程
 Environment：指定环境变量
 ```
 
@@ -117,7 +119,7 @@ Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
 ## 参考
 https://cloud.tencent.com/developer/article/1516125
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI4MTM0MjEzLC0xMDgxMTMwNDM5LC0xMj
-k0NjI5NDk5LC0xMjc3MDEzNjE4LDEyNjE3NTYxODksMTIxOTI0
-Mzk2NV19
+eyJoaXN0b3J5IjpbMTM0MjA3MjA5MywzMjgxMzQyMTMsLTEwOD
+ExMzA0MzksLTEyOTQ2Mjk0OTksLTEyNzcwMTM2MTgsMTI2MTc1
+NjE4OSwxMjE5MjQzOTY1XX0=
 -->
