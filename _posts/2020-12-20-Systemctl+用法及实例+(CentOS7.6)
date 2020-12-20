@@ -50,8 +50,8 @@ TimeoutStopSec=5
 [Install]
 WantedBy=multi-user.target
 ```
-
-## **[Unit]**
+## **参数详解**
+#### **[Unit]**
 ```shell
 Description：简短描述
 Documentation：文档地址
@@ -72,7 +72,7 @@ Assert...：当前 Unit 运行必须满足的条件，否则会报启动失败
     +-----+    +-------+    +------+
 ```
 
-## **[Service]**
+#### **[Service]**
 ```shell
 Type：定义启动时的进程行为。它有以下几种值。
     Type=simple：(默认值)启动一个子进程运行命令，用于不会退出的程序
@@ -137,7 +137,7 @@ LimitCPU / LimitSTACK / LimitNOFILE / LimitNPROC 等：限制特定服务的系�
     +--------+    +--------------------------------------------------------+
 ```
 
-## **[Install]**
+#### **[Install]**
 ```shell
 WantedBy：Unit 激活时（enable）xxx.service符号链接会放入/etc/systemd/system/xxx.target.wants/目录下面
     multi-user.target: # 表示多用户命令行状态，这个设置很重要
@@ -196,7 +196,7 @@ systemctl start apache@8080.service
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125)
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTAzNDc5OTQsLTY0NzI1MTg2MCwtMj
+eyJoaXN0b3J5IjpbLTIwNzQzMDQ0NzUsLTY0NzI1MTg2MCwtMj
 A1NTQ3MTgwOSwtMjQyMjcyMzY0LDEyMzg1NzA0NDMsMTc5ODQ1
 MDk1NCwzMjgxMzQyMTMsLTEwODExMzA0MzksLTEyOTQ2Mjk0OT
 ksLTEyNzcwMTM2MTgsMTI2MTc1NjE4OSwxMjE5MjQzOTY1XX0=
