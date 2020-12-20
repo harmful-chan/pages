@@ -74,8 +74,8 @@ Assert...：当前 Unit 运行必须满足的条件，否则会报启动失败
 ```shell
 Type：定义启动时的进程行为。它有以下几种值。
     Type=simple：(默认值)启动一个子进程运行命令，用于不会退出的程序
-    Type=forking：fork一个字进程，等待进程完成，多用于后台进程 
-    Type=oneshot：system
+    Type=forking：fork一个字进程，等待命令完成后退出，多用于后台进程 
+    Type=oneshot：systemctl 等待命令完成再往下执行，像在控制台执行一个命令一样
     Type=dbus：当前服务通过D-Bus启动
     Type=notify：当前服务启动完毕，会通知Systemd，再继续往下执行
     Type=idle：若有其他任务执行完毕，当前服务才会运行
@@ -117,7 +117,7 @@ Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
 ## 参考
 https://cloud.tencent.com/developer/article/1516125
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzgxMDk2MTgsLTEwODExMzA0MzksLT
-EyOTQ2Mjk0OTksLTEyNzcwMTM2MTgsMTI2MTc1NjE4OSwxMjE5
-MjQzOTY1XX0=
+eyJoaXN0b3J5IjpbMzI4MTM0MjEzLC0xMDgxMTMwNDM5LC0xMj
+k0NjI5NDk5LC0xMjc3MDEzNjE4LDEyNjE3NTYxODksMTIxOTI0
+Mzk2NV19
 -->
