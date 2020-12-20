@@ -101,8 +101,8 @@ KillMode的类型：
     mixed:   # 主进程将收到SIGTERM信号，子进程收到SIGKILL信号
     none:    # 没有进程会被杀掉，只是执行服务的stop命令
 TimeoutSec：定义 Systemd 停止当前服务之前等待的秒数
-TimeoutStartSec：启动后等待miao启动服务时等待的秒数，这一配置对于使用 Docker 容器而言显得尤为重要，因其第一次运行时可能需要下载镜像，严重延时会容易被 Systemd 误判为启动失败杀死。通常，对于这种服务，将此值指定为 0，从而关闭超时检测
-TimeoutStopSec：停止后等待秒数，超时使用 SIGKILL 停止服务
+TimeoutStartSec：启动命令执行后等待秒数，超时停止。（0 关闭超时检测）
+TimeoutStopSec：停止命令执行后等待秒数，超时使用 SIGKILL 停止服务
 Environment：为服务指定环境变量
 EnvironmentFile：指定加载一个包含服务所需的环境变量的列表的文件，文件中的每一行都是一个环境变量的定义
 -   Nice：服务的进程优先级，值越小优先级越高，默认为 0。其中 -20 为最高优先级，19 为最低优先级
@@ -130,7 +130,7 @@ Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
 ## 参考
 https://cloud.tencent.com/developer/article/1516125
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzYyMjAzMTQsMTc5ODQ1MDk1NCwzMj
-gxMzQyMTMsLTEwODExMzA0MzksLTEyOTQ2Mjk0OTksLTEyNzcw
-MTM2MTgsMTI2MTc1NjE4OSwxMjE5MjQzOTY1XX0=
+eyJoaXN0b3J5IjpbLTkxNzA2NzIzMywxNzk4NDUwOTU0LDMyOD
+EzNDIxMywtMTA4MTEzMDQzOSwtMTI5NDYyOTQ5OSwtMTI3NzAx
+MzYxOCwxMjYxNzU2MTg5LDEyMTkyNDM5NjVdfQ==
 -->
