@@ -113,7 +113,7 @@ WorkingDirectory：指定服务的工作目录，目录不纯在命令不能运�
 RootDirectory：指定服务进程的根目录（/ 目录）。如果配置了这个参数，服务将无法访问指定目录以外的任何文件
 User：指定运行服务的用户
 Group：指定运行服务的用户组
-MountFlags：服务的 Mount Namespace 配置，会影响进程上下文中挂载点的信息，即服务是否会继承主机上已有挂载点，以及如果服务运行执行了挂载或卸载设备的操作，是否会真实地在主机上产生效果。可选值为 shared、slaved 或 private。
+MountFlags：服务的 Mount Namespace 配置，会影响进程上下文中挂载点的信息。
     shared：服务与主机共用一个 Mount Namespace，相互影响
     slave：服务使用独立的 Mount Namespace，它会继承主机挂载点，但服务对挂载点的操作只有在自己的 Namespace 内生效，不会反映到主机上
     private：服务使用独立的 Mount Namespace，它在启动时没有任何任何挂载点，服务对挂载点的操作也不会反映到主机上
@@ -195,7 +195,7 @@ systemctl start apache@8080.service
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125)
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzg0Mjk2MjYsLTU3MTQ4NjY3MiwtNj
+eyJoaXN0b3J5IjpbLTE0Njg5MzA2MTEsLTU3MTQ4NjY3MiwtNj
 Q3MjUxODYwLC0yMDU1NDcxODA5LC0yNDIyNzIzNjQsMTIzODU3
 MDQ0MywxNzk4NDUwOTU0LDMyODEzNDIxMywtMTA4MTEzMDQzOS
 wtMTI5NDYyOTQ5OSwtMTI3NzAxMzYxOCwxMjYxNzU2MTg5LDEy
