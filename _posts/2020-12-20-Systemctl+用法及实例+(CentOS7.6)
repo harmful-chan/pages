@@ -127,8 +127,8 @@ LimitCPU / LimitSTACK / LimitNOFILE / LimitNPROC 等：限制特定服务的系�
     +----+
     +-------+    +------------------------+
     |Restart| -> |ExecReload -> RestartSec| 
-	
-   |KillMode
+	+--------+
+	|KillMode| -> |TimeoutSec -> ExecStop -> ExecStopPost
 ```
 
 [Install]字段描述
@@ -145,7 +145,7 @@ Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125)
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0NzIzODI5MCwtMjA1NTQ3MTgwOSwtMj
+eyJoaXN0b3J5IjpbMTg1MzYyNzY5NywtMjA1NTQ3MTgwOSwtMj
 QyMjcyMzY0LDEyMzg1NzA0NDMsMTc5ODQ1MDk1NCwzMjgxMzQy
 MTMsLTEwODExMzA0MzksLTEyOTQ2Mjk0OTksLTEyNzcwMTM2MT
 gsMTI2MTc1NjE4OSwxMjE5MjQzOTY1XX0=
