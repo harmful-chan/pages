@@ -13,7 +13,7 @@ Systemd 是一系列工具的集合，其作用也远远不仅是启动操作系
 #用户服务，需要登录后才能运行程序
 **/usr/lib/systemd/user**
 #命名
-**脚本一般以xxx.service命名，且脚本中分为三部分：[Unit]、[Service]、[Install]**
+**一般xxx.service**
 
 ## Quick Start
 ```shell
@@ -115,6 +115,7 @@ MountFlags：服务的 Mount Namespace 配置，会影响进程上下文中挂�
     slave：服务使用独立的 Mount Namespace，它会继承主机挂载点，但服务对挂载点的操作只有在自己的 Namespace 内生效，不会反映到主机上
     private：服务使用独立的 Mount Namespace，它在启动时没有任何任何挂载点，服务对挂载点的操作也不会反映到主机上
 LimitCPU / LimitSTACK / LimitNOFILE / LimitNPROC 等：限制特定服务的系统资源量，例如 CPU、程序堆栈、文件句柄数量、子进程数量等，请看参考文档
+
 ```
 
 [Install]字段描述
@@ -131,8 +132,8 @@ Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125)
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDcwNDU3OTksLTI0MjI3MjM2NCwxMj
-M4NTcwNDQzLDE3OTg0NTA5NTQsMzI4MTM0MjEzLC0xMDgxMTMw
-NDM5LC0xMjk0NjI5NDk5LC0xMjc3MDEzNjE4LDEyNjE3NTYxOD
-ksMTIxOTI0Mzk2NV19
+eyJoaXN0b3J5IjpbMTg4NDA0NTIzMiwtMjQyMjcyMzY0LDEyMz
+g1NzA0NDMsMTc5ODQ1MDk1NCwzMjgxMzQyMTMsLTEwODExMzA0
+MzksLTEyOTQ2Mjk0OTksLTEyNzcwMTM2MTgsMTI2MTc1NjE4OS
+wxMjE5MjQzOTY1XX0=
 -->
