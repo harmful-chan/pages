@@ -14,6 +14,7 @@ Systemd 是一系列工具的集合，其作用也远远不仅是启动操作系
 **/usr/lib/systemd/user**
 #命名
 **脚本一般以xxx.service命名，且脚本中分为三部分：[Unit]、[Service]、[Install]**
+
 ## Quick Start
 ```shell
 # 运行nginx后台服务
@@ -30,9 +31,11 @@ PrivateTmp=ture
 [Install]
 WantedBy=multi-user.target
 ```
+```shell
+[Unit] Description=OpenSSH server daemon Documentation=man:sshd(8) man:sshd_config(5) After=network.target sshd-keygen.service Wants=sshd-keygen.service [Service] EnvironmentFile=/etc/sysconfig/sshd ExecStart=/usr/sbin/sshd -D $OPTIONS ExecReload=/bin/kill -HUP $MAINPID KillMode=process Restart=on-failure RestartSec=42s [Install] WantedBy=multi-user.target
 
 ## 参考
 https://cloud.tencent.com/developer/article/1516125
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQxOTI1MDk4XX0=
+eyJoaXN0b3J5IjpbMTIxOTI0Mzk2NV19
 -->
