@@ -31,11 +31,13 @@ PrivateTmp=ture
 [Install]
 WantedBy=multi-user.target
 ```
+
 ```shell
-[Unit] Description=OpenSSH server daemon Documentation=man:sshd(8) man:sshd_config(5) After=network.target sshd-keygen.service Wants=sshd-keygen.service [Service] EnvironmentFile=/etc/sysconfig/sshd ExecStart=/usr/sbin/sshd -D $OPTIONS ExecReload=/bin/kill -HUP $MAINPID KillMode=process Restart=on-failure RestartSec=42s [Install] WantedBy=multi-user.target
+
+```
 
 ## 参考
 https://cloud.tencent.com/developer/article/1516125
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxOTI0Mzk2NV19
+eyJoaXN0b3J5IjpbMTU3NjIzNDI5MCwxMjE5MjQzOTY1XX0=
 -->
