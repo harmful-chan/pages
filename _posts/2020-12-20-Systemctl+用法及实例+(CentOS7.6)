@@ -104,7 +104,7 @@ TimeoutSec：停止命令执行前等待秒数。
 TimeoutStartSec：启动命令执行后等待秒数，超时停止。（0 关闭超时检测）
 TimeoutStopSec：停止命令执行后等待秒数，超时使用 SIGKILL 停止服务。
 Environment：为服务指定环境变量
-EnvironmentFile：指定加载一个包含服务所需的环境变量的列表的文件，文件中的每一行都是一个环境变量的定义
+EnvironmentFile：环境变量文件，一行一个不要有ko
 -   Nice：服务的进程优先级，值越小优先级越高，默认为 0。其中 -20 为最高优先级，19 为最低优先级
 -   WorkingDirectory：指定服务的工作目录
 -   RootDirectory：指定服务进程的根目录（/ 目录）。如果配置了这个参数，服务将无法访问指定目录以外的任何文件
@@ -130,7 +130,7 @@ Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
 ## 参考
 https://cloud.tencent.com/developer/article/1516125
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMjc4MDY4MCwxNzk4NDUwOTU0LDMyOD
-EzNDIxMywtMTA4MTEzMDQzOSwtMTI5NDYyOTQ5OSwtMTI3NzAx
-MzYxOCwxMjYxNzU2MTg5LDEyMTkyNDM5NjVdfQ==
+eyJoaXN0b3J5IjpbOTg4MDA2ODQ5LDE3OTg0NTA5NTQsMzI4MT
+M0MjEzLC0xMDgxMTMwNDM5LC0xMjk0NjI5NDk5LC0xMjc3MDEz
+NjE4LDEyNjE3NTYxODksMTIxOTI0Mzk2NV19
 -->
