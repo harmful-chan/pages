@@ -39,9 +39,11 @@ Description=code-server background running.
 
 [Service]
 Type=simple
+Environment="PASSWORD=XXX"
+EnvironmentFile=-/etc/code-server/code-server
 PIDFile=/run/code-server.pid
 ExecStart=/usr/bin/code-server --config /etc/code-server/code-server.config.yaml
-KillSignal=SIGQUIT
+KillSignal=control-group
 ExecStop=/bin/kill -SIGTERM $MAINPID
 TimeoutStopSec=5
 
@@ -150,8 +152,9 @@ Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125)
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2MjE5ODAzLC02NDcyNTE4NjAsLTIwNT
-U0NzE4MDksLTI0MjI3MjM2NCwxMjM4NTcwNDQzLDE3OTg0NTA5
-NTQsMzI4MTM0MjEzLC0xMDgxMTMwNDM5LC0xMjk0NjI5NDk5LC
-0xMjc3MDEzNjE4LDEyNjE3NTYxODksMTIxOTI0Mzk2NV19
+eyJoaXN0b3J5IjpbLTMwMjA3MjE5MiwtNjQ3MjUxODYwLC0yMD
+U1NDcxODA5LC0yNDIyNzIzNjQsMTIzODU3MDQ0MywxNzk4NDUw
+OTU0LDMyODEzNDIxMywtMTA4MTEzMDQzOSwtMTI5NDYyOTQ5OS
+wtMTI3NzAxMzYxOCwxMjYxNzU2MTg5LDEyMTkyNDM5NjVdfQ==
+
 -->
