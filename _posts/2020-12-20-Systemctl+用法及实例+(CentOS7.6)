@@ -63,8 +63,8 @@ After：如果该字段指定的 Unit 也要启动，那么必须在当前 Unit 
 Conflicts：这里指定的 Unit 不能与当前 Unit 同时运行
 Condition...：当前 Unit 运行必须满足的条件，否则不会运行
 Assert...：当前 Unit 运行必须满足的条件，否则会报启动失败
------
-After->
++-------------------+    +------------------
+|After->Condition...| -> |Requires -> Assert
 ```
 
 [Service]区块字段描述
@@ -112,7 +112,7 @@ Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
 ## 参考
 https://cloud.tencent.com/developer/article/1516125
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3MjI1NDc4MSwtMTA4MTEzMDQzOSwtMT
+eyJoaXN0b3J5IjpbLTExMTIyODI2MSwtMTA4MTEzMDQzOSwtMT
 I5NDYyOTQ5OSwtMTI3NzAxMzYxOCwxMjYxNzU2MTg5LDEyMTky
 NDM5NjVdfQ==
 -->
