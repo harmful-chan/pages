@@ -102,8 +102,19 @@ KillMode的类型：
     none:    # 没有进程会被杀掉，只是执行服务的stop命令
 TimeoutSec：定义 Systemd 停止当前服务之前等待的秒数
 TimeoutStartSec：启动服务时等待的秒数，这一配置对于使用 Docker 容器而言显得尤为重要，因其第一次运行时可能需要下载镜像，严重延时会容易被 Systemd 误判为启动失败杀死。通常，对于这种服务，将此值指定为 0，从而关闭超时检测
-TimeoutStopSec：停止服务时的等待秒数，如果超过这个时间仍然没有停止，Systemd 会使用 SIGKILL 信号强行杀死服务的进程
-Environment：指定环境变量
+TimeoutStopSec：ti停止服务时的等待秒数，如果超过这个时间仍然没有停止，Systemd 会使用 SIGKILL 信号强行杀死服务的进程
+Environment：为服务指定环境变量
+EnvironmentFile：指定加载一个包含服务所需的环境变量的列表的文件，文件中的每一行都是一个环境变量的定义
+-   Nice：服务的进程优先级，值越小优先级越高，默认为 0。其中 -20 为最高优先级，19 为最低优先级
+-   WorkingDirectory：指定服务的工作目录
+-   RootDirectory：指定服务进程的根目录（/ 目录）。如果配置了这个参数，服务将无法访问指定目录以外的任何文件
+-   User：指定运行服务的用户
+-   Group：指定运行服务的用户组
+-   MountFlags：服务的 Mount Namespace 配置，会影响进程上下文中挂载点的信息，即服务是否会继承主机上已有挂载点，以及如果服务运行执行了挂载或卸载设备的操作，是否会真实地在主机上产生效果。可选值为 shared、slaved 或 private
+    -   shared：服务与主机共用一个 Mount Namespace，继承主机挂载点，且服务挂载或卸载设备会真实地反映到主机上
+    -   slave：服务使用独立的 Mount Namespace，它会继承主机挂载点，但服务对挂载点的操作只有在自己的 Namespace 内生效，不会反映到主机上
+    -   private：服务使用独立的 Mount Namespace，它在启动时没有任何任何挂载点，服务对挂载点的操作也不会反映到主机上
+-   LimitCPU / LimitSTACK / LimitNOFILE / LimitNPROC 等：限制特定服务的系统资源量，例如 CPU、程序堆栈、文件句柄数量、子进程数量等
 ```
 
 [Install]字段描述
@@ -119,7 +130,7 @@ Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
 ## 参考
 https://cloud.tencent.com/developer/article/1516125
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5ODQ1MDk1NCwzMjgxMzQyMTMsLTEwOD
-ExMzA0MzksLTEyOTQ2Mjk0OTksLTEyNzcwMTM2MTgsMTI2MTc1
-NjE4OSwxMjE5MjQzOTY1XX0=
+eyJoaXN0b3J5IjpbLTE3NTM0NzIzMywxNzk4NDUwOTU0LDMyOD
+EzNDIxMywtMTA4MTEzMDQzOSwtMTI5NDYyOTQ5OSwtMTI3NzAx
+MzYxOCwxMjYxNzU2MTg5LDEyMTkyNDM5NjVdfQ==
 -->
