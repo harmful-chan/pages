@@ -184,22 +184,19 @@ ExecStopPost=/usr/bin/docker rm apache1
 ExecStopPost=/usr/bin/etcdctl rm /domains/example.com/%H:%i
 [Install]
 WantedBy=multi-user.target
-
-# 启动服务
-systemctl start apache@8080.service
 ```
 
+#### **启动服务**
 在服务启动时需要在 @ 后面放置一个用于区分服务实例的附加字符参数，通常这个参数用于监控的端口号或控制台 TTY 编译号。
-
-
-
 Systemd 在运行服务时，总是会先尝试找到一个完整匹配的 Unit 文件，如果没有找到，才会尝试选择匹配模板。例如上面的命令，System 首先会在约定的目录下寻找名为 apache@8080.service 的文件，如果没有找到，而文件名中包含 @ 字符，它就会尝试去掉后缀参数匹配模板文件。对于 apache@8080.service，systemd 会找到 apache@.service 模板文件，并通过这个模板文件将服务实例化。
-
+```shell
+systemctl start apache@8080.service
+```
 ## 参考
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125)
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzQzODg0MTEsLTY0NzI1MTg2MCwtMj
+eyJoaXN0b3J5IjpbLTE1MTAzNDc5OTQsLTY0NzI1MTg2MCwtMj
 A1NTQ3MTgwOSwtMjQyMjcyMzY0LDEyMzg1NzA0NDMsMTc5ODQ1
 MDk1NCwzMjgxMzQyMTMsLTEwODExMzA0MzksLTEyOTQ2Mjk0OT
 ksLTEyNzcwMTM2MTgsMTI2MTc1NjE4OSwxMjE5MjQzOTY1XX0=
