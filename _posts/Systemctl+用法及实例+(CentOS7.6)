@@ -9,11 +9,11 @@ Systemd 是一系列工具的集合，其作用也远远不仅是启动操作系
 
 ## 存放位置
 #系统服务，开机不需要登录就能运行的程序（可以用于开机自启）
-/usr/lib/systemd/user #用户服务，需要登录后才能运行程序
-
-服务脚本编写
-
-**服务脚本一般以xxx.service命名，且脚本中分为三部分：[Unit]、[Service]、[Install]**
+**/usr/lib/systemd/system** 
+#用户服务，需要登录后才能运行程序
+**/usr/lib/systemd/user**
+#命名
+**脚本一般以xxx.service命名，且脚本中分为三部分：[Unit]、[Service]、[Install]**
 ## Quick Start
 ```shell
 # 运行nginx后台服务
@@ -34,5 +34,5 @@ WantedBy=multi-user.target
 ## 参考
 https://cloud.tencent.com/developer/article/1516125
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDY3MjY1MjVdfQ==
+eyJoaXN0b3J5IjpbODQxOTI1MDk4XX0=
 -->
