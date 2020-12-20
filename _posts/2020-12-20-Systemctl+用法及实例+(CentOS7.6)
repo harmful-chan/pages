@@ -73,8 +73,8 @@ Assert...：当前 Unit 运行必须满足的条件，否则会报启动失败
 **[Service]**
 ```shell
 Type：定义启动时的进程行为。它有以下几种值。
-    Type=simple：默认值，执行ExecStart指定的命令，启动主进程
-    Type=forking：以 fork 方式从父进程创建子进程，创建后父进程会立即退出
+    Type=simple：(默认值)启动一个子进程运行命令，用于不会退出的cheng
+    Type=forking：以 fork 方式从父进程创建子进程，创建后父进程会立
     Type=oneshot：一次性进程，Systemd 会等当前服务退出，再继续往下执行
     Type=dbus：当前服务通过D-Bus启动
     Type=notify：当前服务启动完毕，会通知Systemd，再继续往下执行
@@ -117,7 +117,7 @@ Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
 ## 参考
 https://cloud.tencent.com/developer/article/1516125
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzQ2MzE5NDYsLTEwODExMzA0MzksLT
+eyJoaXN0b3J5IjpbLTExMDUxMzUzMDQsLTEwODExMzA0MzksLT
 EyOTQ2Mjk0OTksLTEyNzcwMTM2MTgsMTI2MTc1NjE4OSwxMjE5
 MjQzOTY1XX0=
 -->
