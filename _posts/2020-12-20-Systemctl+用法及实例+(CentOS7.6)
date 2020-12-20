@@ -114,7 +114,7 @@ MountFlags：服务的 Mount Namespace 配置，会影响进程上下文中挂�
     shared：服务与主机共用一个 Mount Namespace，相互影响
     slave：服务使用独立的 Mount Namespace，它会继承主机挂载点，但服务对挂载点的操作只有在自己的 Namespace 内生效，不会反映到主机上
     private：服务使用独立的 Mount Namespace，它在启动时没有任何任何挂载点，服务对挂载点的操作也不会反映到主机上
-LimitCPU / LimitSTACK / LimitNOFILE / LimitNPROC 等：限制特定服务的系统资源量，例如 CPU、程序堆栈、文件句柄数量、子进程数量等，请看参考文档
+LimitCPU / LimitSTACK / LimitNOFILE / LimitNPROC 等：限制特定服务的系统资源量，例如 CPU、程序堆栈、文件句柄数量、子进程数量等，请看[参考文档](#Linux systemd资源控制初探)
 
 ```
 
@@ -132,7 +132,7 @@ Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125)
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4NDA0NTIzMiwtMjQyMjcyMzY0LDEyMz
+eyJoaXN0b3J5IjpbLTQ1NzIzODA2MSwtMjQyMjcyMzY0LDEyMz
 g1NzA0NDMsMTc5ODQ1MDk1NCwzMjgxMzQyMTMsLTEwODExMzA0
 MzksLTEyOTQ2Mjk0OTksLTEyNzcwMTM2MTgsMTI2MTc1NjE4OS
 wxMjE5MjQzOTY1XX0=
