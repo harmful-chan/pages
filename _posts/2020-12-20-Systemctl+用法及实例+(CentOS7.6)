@@ -49,10 +49,6 @@ WantedBy=multi-user.target
 ```
 
 ## 参数详解
-> #1、[Unit] 描述
-> Description=server name ...
-> Documentation=man:sshd(8)
-> > 
 
 
 **[Unit]**
@@ -112,7 +108,7 @@ Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
 ## 参考
 https://cloud.tencent.com/developer/article/1516125
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI2NDQ5NzgyLC0xMDgxMTMwNDM5LC0xMj
-k0NjI5NDk5LC0xMjc3MDEzNjE4LDEyNjE3NTYxODksMTIxOTI0
-Mzk2NV19
+eyJoaXN0b3J5IjpbLTIwMDQ0NDY0OSwtMTA4MTEzMDQzOSwtMT
+I5NDYyOTQ5OSwtMTI3NzAxMzYxOCwxMjYxNzU2MTg5LDEyMTky
+NDM5NjVdfQ==
 -->
