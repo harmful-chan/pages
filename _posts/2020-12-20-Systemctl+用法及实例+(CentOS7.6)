@@ -8,11 +8,11 @@ category: CentOS7.6
 Systemd 是一系列工具的集合，其作用也远远不仅是启动操作系统，它还接管了后台服务、结束、状态查询，以及日志归档、设备管理、电源管理、定时任务等许多职责，并支持通过特定事件（如插入特定 USB 设备）和特定端口数据触发的 On-demand（按需）任务。
 
 ## 存放位置
-#系统服务，开机不需要登录就能运行的程序（可以用于开机自启）
+系统服务，开机不需要登录就能运行的程序（可以用于开机自启）
 **/usr/lib/systemd/system** 
-#用户服务，需要登录后才能运行程序
+用户服务，需要登录后才能运行程序
 **/usr/lib/systemd/user**
-#命名
+命名
 **一般xxx.service**
 
 ## Quick Start
@@ -71,7 +71,6 @@ Assert...：当前 Unit 运行必须满足的条件，否则会报启动失败
  -> |Wants| -> |BindsTo| -> |Before| -> ...
     +-----+    +-------+    +------+
 ```
-
 #### **[Service]**
 ```shell
 Type：定义启动时的进程行为。它有以下几种值。
@@ -136,7 +135,6 @@ LimitCPU / LimitSTACK / LimitNOFILE / LimitNPROC 等：限制特定服务的系�
  -> |KillMode| -> |TimeoutSec -> ExecStop -> ExecStopPost -> TimeoutStopSec| -> ...
     +--------+    +--------------------------------------------------------+
 ```
-
 #### **[Install]**
 ```shell
 WantedBy：Unit 激活时（enable）xxx.service符号链接会放入/etc/systemd/system/xxx.target.wants/目录下面
@@ -192,13 +190,13 @@ Systemd 在运行服务时，总是会先尝试找到一个完整匹配的 Unit 
 ```shell
 systemctl start apache@8080.service
 ```
+## systemctl 基本命令
 ## 参考
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125)
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzQzMDQ0NzUsLTY0NzI1MTg2MCwtMj
-A1NTQ3MTgwOSwtMjQyMjcyMzY0LDEyMzg1NzA0NDMsMTc5ODQ1
-MDk1NCwzMjgxMzQyMTMsLTEwODExMzA0MzksLTEyOTQ2Mjk0OT
-ksLTEyNzcwMTM2MTgsMTI2MTc1NjE4OSwxMjE5MjQzOTY1XX0=
-
+eyJoaXN0b3J5IjpbODI3MDMzNjksLTY0NzI1MTg2MCwtMjA1NT
+Q3MTgwOSwtMjQyMjcyMzY0LDEyMzg1NzA0NDMsMTc5ODQ1MDk1
+NCwzMjgxMzQyMTMsLTEwODExMzA0MzksLTEyOTQ2Mjk0OTksLT
+EyNzcwMTM2MTgsMTI2MTc1NjE4OSwxMjE5MjQzOTY1XX0=
 -->
