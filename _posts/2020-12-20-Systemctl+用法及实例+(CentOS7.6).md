@@ -17,8 +17,7 @@ Systemd 是一系列工具的集合，其作用也远远不仅是启动操作系
 
 ## Quick Start
 > **nginx.service**
- ```shell
-# 运行nginx后台服务
+```shell
 [Unit]
 Description=nginx
 After=network.target 
@@ -35,7 +34,6 @@ WantedBy=multi-user.target
 
 > **code-server.service**
 ```shell
-# code-server 后台运行
 [Unit]
 Description=code-server background running.
 
@@ -200,9 +198,10 @@ systemctl start apache@8080.service
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125)
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxNzIyMTU0MiwtMzI2NjA5ODg2LDIwOD
-AzMjgzMjEsLTU3MTQ4NjY3MiwtNjQ3MjUxODYwLC0yMDU1NDcx
-ODA5LC0yNDIyNzIzNjQsMTIzODU3MDQ0MywxNzk4NDUwOTU0LD
-MyODEzNDIxMywtMTA4MTEzMDQzOSwtMTI5NDYyOTQ5OSwtMTI3
-NzAxMzYxOCwxMjYxNzU2MTg5LDEyMTkyNDM5NjVdfQ==
+eyJoaXN0b3J5IjpbNzIyODkzNzgzLDE2MTcyMjE1NDIsLTMyNj
+YwOTg4NiwyMDgwMzI4MzIxLC01NzE0ODY2NzIsLTY0NzI1MTg2
+MCwtMjA1NTQ3MTgwOSwtMjQyMjcyMzY0LDEyMzg1NzA0NDMsMT
+c5ODQ1MDk1NCwzMjgxMzQyMTMsLTEwODExMzA0MzksLTEyOTQ2
+Mjk0OTksLTEyNzcwMTM2MTgsMTI2MTc1NjE4OSwxMjE5MjQzOT
+Y1XX0=
 -->
