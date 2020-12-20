@@ -51,8 +51,7 @@ TimeoutStopSec=5
 WantedBy=multi-user.target
 ```
 
-## 参数详解
-**[Unit]**
+## **[Unit]**
 ```shell
 Description：简短描述
 Documentation：文档地址
@@ -73,7 +72,7 @@ Assert...：当前 Unit 运行必须满足的条件，否则会报启动失败
     +-----+    +-------+    +------+
 ```
 
-**[Service]**
+## **[Service]**
 ```shell
 Type：定义启动时的进程行为。它有以下几种值。
     Type=simple：(默认值)启动一个子进程运行命令，用于不会退出的程序
@@ -138,7 +137,7 @@ LimitCPU / LimitSTACK / LimitNOFILE / LimitNPROC 等：限制特定服务的系�
     +--------+    +--------------------------------------------------------+
 ```
 
-**[Install]**
+## **[Install]**
 ```shell
 WantedBy：Unit 激活时（enable）xxx.service符号链接会放入/etc/systemd/system/xxx.target.wants/目录下面
     multi-user.target: # 表示多用户命令行状态，这个设置很重要
@@ -147,12 +146,12 @@ RequiredBy：Unit 激活时（enable）xxx.service符号链接会放入/etc/syst
 Alias：当前 Unit 可用于启动的别名
 Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
 ```
-### **Unit 文件占位符和模板**
+## **Unit 文件占位符和模板**
 
 #### **Unit 文件占位符**
 
 在 Unit 文件中，有时会需要使用到一些与运行环境有关的信息，例如节点 ID、运行服务的用户等。这些信息可以使用占位符来表示，然后在实际运行被动态地替换实际的值。
-
+```shell
 -   %n：完整的 Unit 文件名字，包括 .service 后缀名
 -   %p：Unit 模板文件名中 @ 符号之前的部分，不包括 @ 符号
 -   %i：Unit 模板文件名中 @ 符号之后的部分，不包括 @ 符号和 .service 后缀名
@@ -166,7 +165,7 @@ Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
 -   %H：实际运行节点的主机名
 -   %v：内核版本，即 “uname -r” 命令输出的内容
 -   %%：在 Unit 模板文件中表示一个普通的百分号
-
+```
 #### **Unit 模板**
 
 在现实中，往往有一些应用需要被复制多份运行。例如，用于同一个[负载均衡](https://cloud.tencent.com/product/clb?from=10680)器分流的多个服务实例，或者为每个 SSH 连接建立一个独立的 sshd 服务进程。
@@ -205,7 +204,7 @@ Systemd 在运行服务时，总是会先尝试找到一个完整匹配的 Unit 
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125)
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyODg3MjkwMCwtNjQ3MjUxODYwLC0yMD
+eyJoaXN0b3J5IjpbLTE0NTY5NTY2NiwtNjQ3MjUxODYwLC0yMD
 U1NDcxODA5LC0yNDIyNzIzNjQsMTIzODU3MDQ0MywxNzk4NDUw
 OTU0LDMyODEzNDIxMywtMTA4MTEzMDQzOSwtMTI5NDYyOTQ5OS
 wtMTI3NzAxMzYxOCwxMjYxNzU2MTg5LDEyMTkyNDM5NjVdfQ==
