@@ -118,8 +118,9 @@ MountFlags：服务的 Mount Namespace 配置，会影响进程上下文中挂�
     slave：服务使用独立的 Mount Namespace，它会继承主机挂载点，
     但服务对挂载点的操作只有在自己的 Namespace 内生效，不会反映到主机上。
     private：服务使用独立的 Mount Namespace，
-    它在启动时没有任何任何挂载点，服务对挂载点的操作也不会反映到主机上
-LimitCPU / LimitSTACK / LimitNOFILE / LimitNPROC 等：限制特定服务的系统资源量，例如 CPU、程序堆栈、文件句柄数量、子进程数量等，请看
+    它在启动时没有任何任何挂载点，服务对挂载点的操作也不会反映到主机上。
+LimitCPU：LimitSTACK：\
+LimitNOFILE：LimitNPROC： 限制特定服务的系统资源量，请看参考
 
     +-----------+    +----+
     |User->Group| -> |Nice| -> 
@@ -197,9 +198,9 @@ systemctl start apache@8080.service
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125)
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIxNDUyNTEzLC01NzE0ODY2NzIsLTY0Nz
-I1MTg2MCwtMjA1NTQ3MTgwOSwtMjQyMjcyMzY0LDEyMzg1NzA0
-NDMsMTc5ODQ1MDk1NCwzMjgxMzQyMTMsLTEwODExMzA0MzksLT
-EyOTQ2Mjk0OTksLTEyNzcwMTM2MTgsMTI2MTc1NjE4OSwxMjE5
-MjQzOTY1XX0=
+eyJoaXN0b3J5IjpbMjA4MDMyODMyMSwtNTcxNDg2NjcyLC02ND
+cyNTE4NjAsLTIwNTU0NzE4MDksLTI0MjI3MjM2NCwxMjM4NTcw
+NDQzLDE3OTg0NTA5NTQsMzI4MTM0MjEzLC0xMDgxMTMwNDM5LC
+0xMjk0NjI5NDk5LC0xMjc3MDEzNjE4LDEyNjE3NTYxODksMTIx
+OTI0Mzk2NV19
 -->
