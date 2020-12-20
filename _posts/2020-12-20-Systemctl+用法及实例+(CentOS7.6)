@@ -130,12 +130,12 @@ LimitCPU / LimitSTACK / LimitNOFILE / LimitNPROC 等：限制特定服务的系�
  -> |Restart| -> |ExecReload -> RestartSec| -> 
     +-------+    +------------------------+
 	+--------+    +--------------------------------------------------------+
- -> |KillMode| -> |TimeoutSec -> ExecStop -> ExecStopPost -> TimeoutStopSec|
-    +--------+    +-------------------------------------------------------+
+ -> |KillMode| -> |TimeoutSec -> ExecStop -> ExecStopPost -> TimeoutStopSec| -> ...
+    +--------+    +--------------------------------------------------------+
 ```
 
-[Install]字段描述
-
+**[Install]**字段描述
+```shell
 WantedBy：它的值是一个或多个 Target，当前 Unit 激活时（enable）符号链接会放入/etc/systemd/system目录下面以 Target 名 + .wants后缀构成的子目录中
     multi-user.target: # 表示多用户命令行状态，这个设置很重要
     graphical.target:  # 表示图形用户状体，它依赖于multi-user.target
@@ -143,13 +143,14 @@ RequiredBy：它的值是一个或多个 Target，当前 Unit 激活时，符号
 Alias：当前 Unit 可用于启动的别名
 Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
 脚本中分为三部分：[Unit]、[Service]、[Install]详细概述
+```
 
 ## 参考
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125)
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDcwNTc5NDk4LC0yMDU1NDcxODA5LC0yND
-IyNzIzNjQsMTIzODU3MDQ0MywxNzk4NDUwOTU0LDMyODEzNDIx
-MywtMTA4MTEzMDQzOSwtMTI5NDYyOTQ5OSwtMTI3NzAxMzYxOC
-wxMjYxNzU2MTg5LDEyMTkyNDM5NjVdfQ==
+eyJoaXN0b3J5IjpbLTE2NTA5NzUzMTgsLTIwNTU0NzE4MDksLT
+I0MjI3MjM2NCwxMjM4NTcwNDQzLDE3OTg0NTA5NTQsMzI4MTM0
+MjEzLC0xMDgxMTMwNDM5LC0xMjk0NjI5NDk5LC0xMjc3MDEzNj
+E4LDEyNjE3NTYxODksMTIxOTI0Mzk2NV19
 -->
