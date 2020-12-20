@@ -190,13 +190,12 @@ Systemd 在运行服务时，总是会先尝试找到一个完整匹配的 Unit 
 ```shell
 systemctl start apache@8080.service
 ```
-## systemctl 基本命令
 
 ## 参考
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125)
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNDU3NTk2MywtNjQ3MjUxODYwLC0yMD
+eyJoaXN0b3J5IjpbLTU3MTQ4NjY3MiwtNjQ3MjUxODYwLC0yMD
 U1NDcxODA5LC0yNDIyNzIzNjQsMTIzODU3MDQ0MywxNzk4NDUw
 OTU0LDMyODEzNDIxMywtMTA4MTEzMDQzOSwtMTI5NDYyOTQ5OS
 wtMTI3NzAxMzYxOCwxMjYxNzU2MTg5LDEyMTkyNDM5NjVdfQ==
