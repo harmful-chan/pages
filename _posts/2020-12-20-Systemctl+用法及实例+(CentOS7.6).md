@@ -16,7 +16,25 @@ Systemd 是一系列工具的集合，其作用也远远不仅是启动操作系
 **一般xxx.service**
 
 ## Quick Start
->  **code-server.service**
+#### nginx
+> **nginx.service**
+```shell
+[Unit]
+Description=nginx
+After=network.target 
+[Service]
+Type=forking
+PIDFile=/usr/local/nginx/logs/nginx.pid
+ExecStart=/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+ExecStop=/usr/local/nginx/sbin/nginx -s stop -c /usr/local/nginx/conf/nginx.conf
+ExecReload= /usr/local/nginx/sbin/nginx -s reload -c /usr/local/nginx/conf/nginx.conf
+PrivateTmp=ture
+[Install]
+WantedBy=multi-user.target
+```
+
+#### vs code
+> **code-server.service**
 ```shell
 [Unit]
 Description=code-server background running.
@@ -35,6 +53,8 @@ TimeoutStopSec=5
 [Install]
 WantedBy=multi-user.target
 ```
+
+
 ## **参数详解**
 #### **[Unit]**
 ```shell
@@ -183,7 +203,7 @@ systemctl start apache@8080.service
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125)
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjc1NDcwNzAsLTM4OTUxMjQ3LDcyMj
+eyJoaXN0b3J5IjpbLTE4ODk4NjI0NTUsLTM4OTUxMjQ3LDcyMj
 g5Mzc4MywxNjE3MjIxNTQyLC0zMjY2MDk4ODYsMjA4MDMyODMy
 MSwtNTcxNDg2NjcyLC02NDcyNTE4NjAsLTIwNTU0NzE4MDksLT
 I0MjI3MjM2NCwxMjM4NTcwNDQzLDE3OTg0NTA5NTQsMzI4MTM0
