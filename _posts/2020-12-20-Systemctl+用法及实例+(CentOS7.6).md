@@ -16,41 +16,41 @@ Systemd 是一系列工具的集合，其作用也远远不仅是启动操作系
 **一般xxx.service**
 
 ## Quick Start
->
+> **nginx.service**
 > ```shell
 > # 运行nginx后台服务
-[Unit]
-Description=nginx
-After=network.target 
-[Service]
-Type=forking
-PIDFile=/usr/local/nginx/logs/nginx.pid
-ExecStart=/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
-ExecStop=/usr/local/nginx/sbin/nginx -s stop -c /usr/local/nginx/conf/nginx.conf
-ExecReload= /usr/local/nginx/sbin/nginx -s reload -c /usr/local/nginx/conf/nginx.conf
-PrivateTmp=ture
-[Install]
-WantedBy=multi-user.target
-```
+> [Unit]
+> Description=nginx
+> After=network.target 
+> [Service]
+> Type=forking
+> PIDFile=/usr/local/nginx/logs/nginx.pid
+> ExecStart=/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+> ExecStop=/usr/local/nginx/sbin/nginx -s stop -c /usr/local/nginx/conf/nginx.conf
+> ExecReload= /usr/local/nginx/sbin/nginx -s reload -c /usr/local/nginx/conf/nginx.conf
+> PrivateTmp=ture
+> [Install]
+> WantedBy=multi-user.target
+> ```
 
-```shell
-# code-server 后台运行
-[Unit]
-Description=code-server background running.
-
-[Service]
-Type=simple
-Environment="PASSWORD=XXX"
-EnvironmentFile=-/etc/code-server/code-server
-PIDFile=/run/code-server.pid
-ExecStart=/usr/bin/code-server --config /etc/code-server/code-server.config.yaml
-KillSignal=control-group
-ExecStop=/bin/kill -SIGTERM $MAINPID
-TimeoutStopSec=5
-
-[Install]
-WantedBy=multi-user.target
-```
+> ```shell
+> # code-server 后台运行
+> [Unit]
+> Description=code-server background running.
+> 
+> [Service]
+> Type=simple
+> Environment="PASSWORD=XXX"
+> EnvironmentFile=-/etc/code-server/code-server
+> PIDFile=/run/code-server.pid
+> ExecStart=/usr/bin/code-server --config /etc/code-server/code-server.config.yaml
+> KillSignal=control-group
+> ExecStop=/bin/kill -SIGTERM $MAINPID
+> TimeoutStopSec=5
+> 
+> [Install]
+> WantedBy=multi-user.target
+> ```
 ## **参数详解**
 #### **[Unit]**
 ```shell
@@ -199,9 +199,9 @@ systemctl start apache@8080.service
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125)
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyOTM4MjA0OSwyMDgwMzI4MzIxLC01Nz
-E0ODY2NzIsLTY0NzI1MTg2MCwtMjA1NTQ3MTgwOSwtMjQyMjcy
-MzY0LDEyMzg1NzA0NDMsMTc5ODQ1MDk1NCwzMjgxMzQyMTMsLT
-EwODExMzA0MzksLTEyOTQ2Mjk0OTksLTEyNzcwMTM2MTgsMTI2
-MTc1NjE4OSwxMjE5MjQzOTY1XX0=
+eyJoaXN0b3J5IjpbMzE1NTkzMDM2LDIwODAzMjgzMjEsLTU3MT
+Q4NjY3MiwtNjQ3MjUxODYwLC0yMDU1NDcxODA5LC0yNDIyNzIz
+NjQsMTIzODU3MDQ0MywxNzk4NDUwOTU0LDMyODEzNDIxMywtMT
+A4MTEzMDQzOSwtMTI5NDYyOTQ5OSwtMTI3NzAxMzYxOCwxMjYx
+NzU2MTg5LDEyMTkyNDM5NjVdfQ==
 -->
