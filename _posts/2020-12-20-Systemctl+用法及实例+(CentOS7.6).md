@@ -33,6 +33,7 @@ Systemd 是一系列工具的集合，其作用也远远不仅是启动操作系
 > WantedBy=multi-user.target
 > ```
 
+> **code-server.service**
 > ```shell
 > # code-server 后台运行
 > [Unit]
@@ -199,9 +200,9 @@ systemctl start apache@8080.service
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125)
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE1NTkzMDM2LDIwODAzMjgzMjEsLTU3MT
-Q4NjY3MiwtNjQ3MjUxODYwLC0yMDU1NDcxODA5LC0yNDIyNzIz
-NjQsMTIzODU3MDQ0MywxNzk4NDUwOTU0LDMyODEzNDIxMywtMT
-A4MTEzMDQzOSwtMTI5NDYyOTQ5OSwtMTI3NzAxMzYxOCwxMjYx
-NzU2MTg5LDEyMTkyNDM5NjVdfQ==
+eyJoaXN0b3J5IjpbLTMyNjYwOTg4NiwyMDgwMzI4MzIxLC01Nz
+E0ODY2NzIsLTY0NzI1MTg2MCwtMjA1NTQ3MTgwOSwtMjQyMjcy
+MzY0LDEyMzg1NzA0NDMsMTc5ODQ1MDk1NCwzMjgxMzQyMTMsLT
+EwODExMzA0MzksLTEyOTQ2Mjk0OTksLTEyNzcwMTM2MTgsMTI2
+MTc1NjE4OSwxMjE5MjQzOTY1XX0=
 -->
