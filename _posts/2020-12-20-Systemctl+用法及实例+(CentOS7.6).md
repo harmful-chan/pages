@@ -38,20 +38,20 @@ WantedBy=multi-user.target
 # code-server 后台运行
 [Unit]
 Description=code-server background running.
-> 
-> [Service]
-> Type=simple
-> Environment="PASSWORD=XXX"
-> EnvironmentFile=-/etc/code-server/code-server
-> PIDFile=/run/code-server.pid
-> ExecStart=/usr/bin/code-server --config /etc/code-server/code-server.config.yaml
-> KillSignal=control-group
-> ExecStop=/bin/kill -SIGTERM $MAINPID
-> TimeoutStopSec=5
-> 
-> [Install]
-> WantedBy=multi-user.target
-> ```
+
+[Service]
+Type=simple
+Environment="PASSWORD=XXX"
+EnvironmentFile=-/etc/code-server/code-server
+PIDFile=/run/code-server.pid
+ExecStart=/usr/bin/code-server --config /etc/code-server/code-server.config.yaml
+KillSignal=control-group
+ExecStop=/bin/kill -SIGTERM $MAINPID
+TimeoutStopSec=5
+
+[Install]
+WantedBy=multi-user.target
+```
 ## **参数详解**
 #### **[Unit]**
 ```shell
@@ -200,7 +200,7 @@ systemctl start apache@8080.service
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125)
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5MjU5MDE4NiwtMzI2NjA5ODg2LDIwOD
+eyJoaXN0b3J5IjpbMTYxNzIyMTU0MiwtMzI2NjA5ODg2LDIwOD
 AzMjgzMjEsLTU3MTQ4NjY3MiwtNjQ3MjUxODYwLC0yMDU1NDcx
 ODA5LC0yNDIyNzIzNjQsMTIzODU3MDQ0MywxNzk4NDUwOTU0LD
 MyODEzNDIxMywtMTA4MTEzMDQzOSwtMTI5NDYyOTQ5OSwtMTI3
