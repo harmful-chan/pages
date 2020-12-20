@@ -54,7 +54,7 @@ WantedBy=multi-user.target
 **[Unit]**
 Description=简短描述
 Documentation=文档地址
-Before=Unityun xing
+Before=Unit运行前必须要启动
 Requires：当前 Unit 依赖的其他 Unit，如果它们没有运行，当前 Unit 会启动失败
 Wants：与当前 Unit 配合的其他 Unit，如果它们没有运行，当前 Unit 不会启动失败
 BindsTo：与Requires类似，它指定的 Unit 如果退出，会导致当前 Unit 停止运行
@@ -109,7 +109,7 @@ Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
 ## 参考
 https://cloud.tencent.com/developer/article/1516125
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Mjg4OTE5NzYsLTEwODExMzA0MzksLT
-EyOTQ2Mjk0OTksLTEyNzcwMTM2MTgsMTI2MTc1NjE4OSwxMjE5
-MjQzOTY1XX0=
+eyJoaXN0b3J5IjpbLTU5OTgwMjkxLC0xMDgxMTMwNDM5LC0xMj
+k0NjI5NDk5LC0xMjc3MDEzNjE4LDEyNjE3NTYxODksMTIxOTI0
+Mzk2NV19
 -->
