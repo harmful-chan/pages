@@ -33,8 +33,8 @@ PrivateTmp=ture
 WantedBy=multi-user.target
 ```
 
-#### **code-server.service**
->  code-server.service
+####  vs code
+>  **code-server.service**
 ```shell
 [Unit]
 Description=code-server background running.
@@ -200,10 +200,10 @@ systemctl start apache@8080.service
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125)
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjUxNjM0NzEsNzIyODkzNzgzLDE2MT
-cyMjE1NDIsLTMyNjYwOTg4NiwyMDgwMzI4MzIxLC01NzE0ODY2
-NzIsLTY0NzI1MTg2MCwtMjA1NTQ3MTgwOSwtMjQyMjcyMzY0LD
-EyMzg1NzA0NDMsMTc5ODQ1MDk1NCwzMjgxMzQyMTMsLTEwODEx
-MzA0MzksLTEyOTQ2Mjk0OTksLTEyNzcwMTM2MTgsMTI2MTc1Nj
-E4OSwxMjE5MjQzOTY1XX0=
+eyJoaXN0b3J5IjpbLTM4OTUxMjQ3LDcyMjg5Mzc4MywxNjE3Mj
+IxNTQyLC0zMjY2MDk4ODYsMjA4MDMyODMyMSwtNTcxNDg2Njcy
+LC02NDcyNTE4NjAsLTIwNTU0NzE4MDksLTI0MjI3MjM2NCwxMj
+M4NTcwNDQzLDE3OTg0NTA5NTQsMzI4MTM0MjEzLC0xMDgxMTMw
+NDM5LC0xMjk0NjI5NDk5LC0xMjc3MDEzNjE4LDEyNjE3NTYxOD
+ksMTIxOTI0Mzk2NV19
 -->
