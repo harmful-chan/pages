@@ -42,6 +42,7 @@ Type=simple
 PIDFile=/run/code-server.pid
 ExecStart=/usr/bin/code-server --config /etc/code-server/code-server.config.yaml
 KillSignal=SIGQUIT
+ExecStop=/bin/kill -SIGTERM $MAINPID
 TimeoutStopSec=5
 
 [Install]
@@ -140,17 +141,16 @@ LimitCPU / LimitSTACK / LimitNOFILE / LimitNPROC 等：限制特定服务的系�
 WantedBy：Unit 激活时（enable）xxx.service符号链接会放入/etc/systemd/system/xxx.target.wants/目录下面
     multi-user.target: # 表示多用户命令行状态，这个设置很重要
     graphical.target:  # 表示图形用户状体，它依赖于multi-user.target
-RequiredBy：Unit 激活时（enable）xxx.service符号链接会放入/etc/systemd/system/xxx.target.wants/目录下面.required后缀构成的子目录中
+RequiredBy：Unit 激活时（enable）xxx.service符号链接会放入/etc/systemd/system/xxx.target.required/目录下面
 Alias：当前 Unit 可用于启动的别名
 Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
-脚本中分为三部分：[Unit]、[Service]、[Install]详细概述
 ```
 
 ## 参考
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125)
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTExMjExNDkxLC02NDcyNTE4NjAsLTIwNT
+eyJoaXN0b3J5IjpbMTI2MjE5ODAzLC02NDcyNTE4NjAsLTIwNT
 U0NzE4MDksLTI0MjI3MjM2NCwxMjM4NTcwNDQzLDE3OTg0NTA5
 NTQsMzI4MTM0MjEzLC0xMDgxMTMwNDM5LC0xMjk0NjI5NDk5LC
 0xMjc3MDEzNjE4LDEyNjE3NTYxODksMTIxOTI0Mzk2NV19
