@@ -33,11 +33,25 @@ WantedBy=multi-user.target
 ```
 
 ```shell
+# code-server 后台运行
+[Unit]
+Description=code-server background running.
 
+[Service]
+Type=simple
+PIDFile=/run/code-server.pid
+ExecStart=/usr/bin/code-server --config /etc/code-server/code-server.config.yaml
+KillSignal=SIGQUIT
+TimeoutStopSec=5
+
+[Install]
+WantedBy=multi-user.target
 ```
+
+## 参数详解
 
 ## 参考
 https://cloud.tencent.com/developer/article/1516125
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3NjIzNDI5MCwxMjE5MjQzOTY1XX0=
+eyJoaXN0b3J5IjpbMTI2MTc1NjE4OSwxMjE5MjQzOTY1XX0=
 -->
