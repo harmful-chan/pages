@@ -60,7 +60,8 @@ C/C++     ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
 C#        ⭐⭐⭐⭐⭐⭐⭐⭐
 JAVA      ⭐⭐⭐⭐⭐
 SQL       ⭐⭐⭐⭐⭐
-
+HTML      ⭐⭐⭐⭐
+JS        ⭐⭐⭐
 ```
 
 
@@ -68,7 +69,7 @@ SQL       ⭐⭐⭐⭐⭐
 普通打工人 ... 😑
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3NjEzMjYzOCwtMTM2NjMzMDcyNywtNT
+eyJoaXN0b3J5IjpbLTYxNjkxOTgzMiwtMTM2NjMzMDcyNywtNT
 k5ODIzMzM5LDE2NjY2MzQ0OTEsLTEyNjEwODA1OTcsMTYyMzUx
 NTI1NiwxNjI1NjMyNTQ1LC04NTg5MjE1M119
 -->
