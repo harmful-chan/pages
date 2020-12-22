@@ -17,10 +17,10 @@ permalink: /about/
 
 ### 学习\工作 经历
 **2015.9 - 2018.6 &nbsp; &nbsp; &nbsp; 广东机电职业技术学院(大专)**
-**2018.7 - 2019.3 &nbsp; &nbsp; &nbsp; 广东乐呗科技有限公司**
-简易型无人机电路设计|
+**2018.7 - 2019.3 &nbsp; &nbsp; &nbsp; 广东乐呗科技有限公司 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 硬件开发**
+> dwa 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxNTg0NTQzMSwxNjI1NjMyNTQ1LC04NT
+eyJoaXN0b3J5IjpbMTM4NDM5MzczMywxNjI1NjMyNTQ1LC04NT
 g5MjE1M119
 -->
