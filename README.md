@@ -51,9 +51,9 @@ permalink: /about/
 - 系统：CentOS7.6，Ubuntu16.04，Windows Server 2012 R2，Raspberry Pi 3b +
 - 系统管理：systemd，busybox，bash，iptable，grep, sed, awk，ssh 等...
 - 容器管理：Docker，k8s
-- 开发平台：.Net Core，Spring Boot，Nodejs，linux编程
+- 开发平台：.Net Core，Spring Boot，NodeJs，Linux编程，Angular
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMzY1MjU3MSwtNTk5ODIzMzM5LDE2Nj
+eyJoaXN0b3J5IjpbMjExOTk0NDQyMSwtNTk5ODIzMzM5LDE2Nj
 Y2MzQ0OTEsLTEyNjEwODA1OTcsMTYyMzUxNTI1NiwxNjI1NjMy
 NTQ1LC04NTg5MjE1M119
 -->
