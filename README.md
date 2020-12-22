@@ -23,9 +23,9 @@ permalink: /about/
 >  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; 调试姿态控制PID算法（**C/C++**）,**硬件**选型，电路设计，程序测试，采购，质量品控。
 
 2018.4 - 2018.8 &nbsp; &nbsp; &nbsp; 广州和达康明科技有限公司 &nbsp; &nbsp;  &nbsp; &nbsp; 硬件工程师
-> 简述：负责公司量产型智能水表硬件测试，d w
+> 简述：负责公司量产型智能水表硬件测试，编写测试用例，工厂质量把控
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwMDY5MTEyNSwxNjI1NjMyNTQ1LC04NT
-g5MjE1M119
+eyJoaXN0b3J5IjpbMzQyODI2NzUsMTYyNTYzMjU0NSwtODU4OT
+IxNTNdfQ==
 -->
