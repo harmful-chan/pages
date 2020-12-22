@@ -161,11 +161,11 @@ Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
 %U：运行服务的用户 ID
 %h：运行服务的用户 Home 目录，即 %{HOME} 环境变量的值
 %s：运行服务的用户默认 Shell 类型，即 %{SHELL} 环境变量的值
--   %m：实际运行节点的 Machine ID，对于运行位置每个的服务比有用
--   %b：Boot ID，这是一个随机数，每个节点各不相同，并且每次节点重启时都会改变
--   %H：实际运行节点的主机名
--   %v：内核版本，即 “uname -r” 命令输出的内容
--   %%：在 Unit 模板文件中表示一个普通的百分号
+%m：实际运行节点的 Machine ID，对于运行位置每个的服务比较有用
+%b：Boot ID，这是一个随机数，每个节点各不相同，并且每次节点重启时都会改变
+%H：实际运行节点的主机名
+%v：内核版本，即 “uname -r” 命令输出的内容
+%%：在 Unit 模板文件中表示一个普通的百分号
 ```
 #### **模板**
 Unit 模板文件的写法与普通的服务 Unit 文件基本相同，不过 Unit 模板的文件名是以 @ 符号结尾的。通过模板启动服务实例时，需要在其文件名的 @ 字符后面附加一个参数字符串。
@@ -199,11 +199,11 @@ systemctl start apache@8080.service
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125) </br>
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDUwNTc1ODMsOTI1OTkyOTE1LC0yMT
-I3MjQyMDMwLDc2MTMxNDE5OSwtMzg5NTEyNDcsNzIyODkzNzgz
-LDE2MTcyMjE1NDIsLTMyNjYwOTg4NiwyMDgwMzI4MzIxLC01Nz
-E0ODY2NzIsLTY0NzI1MTg2MCwtMjA1NTQ3MTgwOSwtMjQyMjcy
-MzY0LDEyMzg1NzA0NDMsMTc5ODQ1MDk1NCwzMjgxMzQyMTMsLT
-EwODExMzA0MzksLTEyOTQ2Mjk0OTksLTEyNzcwMTM2MTgsMTI2
-MTc1NjE4OV19
+eyJoaXN0b3J5IjpbMjEzNjQxNjA5NSw5MjU5OTI5MTUsLTIxMj
+cyNDIwMzAsNzYxMzE0MTk5LC0zODk1MTI0Nyw3MjI4OTM3ODMs
+MTYxNzIyMTU0MiwtMzI2NjA5ODg2LDIwODAzMjgzMjEsLTU3MT
+Q4NjY3MiwtNjQ3MjUxODYwLC0yMDU1NDcxODA5LC0yNDIyNzIz
+NjQsMTIzODU3MDQ0MywxNzk4NDUwOTU0LDMyODEzNDIxMywtMT
+A4MTEzMDQzOSwtMTI5NDYyOTQ5OSwtMTI3NzAxMzYxOCwxMjYx
+NzU2MTg5XX0=
 -->
