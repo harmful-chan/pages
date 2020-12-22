@@ -47,8 +47,10 @@ permalink: /about/
 > **简述**：负责维护直播上课时网络的稳定，软硬件问题排查。  
 > PC端软件升级，机房维护。  
 
+## 技能
+－ 系统：CentOS7.6，Ubuntu
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTgyNDUxMzE5LC01OTk4MjMzMzksMTY2Nj
-YzNDQ5MSwtMTI2MTA4MDU5NywxNjIzNTE1MjU2LDE2MjU2MzI1
-NDUsLTg1ODkyMTUzXX0=
+eyJoaXN0b3J5IjpbLTEyMTk3MzA3MSwtNTk5ODIzMzM5LDE2Nj
+Y2MzQ0OTEsLTEyNjEwODA1OTcsMTYyMzUxNTI1NiwxNjI1NjMy
+NTQ1LC04NTg5MjE1M119
 -->
