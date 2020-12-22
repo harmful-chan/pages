@@ -25,8 +25,8 @@ permalink: /about/
 > 简述：负责公司量产型智能水表硬件测试，编写测试用例，工厂质量把控
 
 2019.4 - 2019.8 &nbsp; &nbsp; &nbsp; 浙江远图互联科技股份有限公司 &nbsp; &nbsp;  &nbsp; &nbsp; 硬件维护
-> jian shu
+> 简述：负责 全番禺区 医院挂号终端的软硬件正常运作。</br>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNTUzODY0NCwxNjI1NjMyNTQ1LC04NT
+eyJoaXN0b3J5IjpbLTc5NjkyNzg0MiwxNjI1NjMyNTQ1LC04NT
 g5MjE1M119
 -->
