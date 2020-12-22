@@ -11,8 +11,8 @@ permalink: /about/
 > 姓名：**陈汉锋** &nbsp; &nbsp; 性别：男 &nbsp; &nbsp; 出生：1996.11 &nbsp; &nbsp; 年龄：24
 > 学历：**全日制本科** &nbsp; &nbsp; 专业：计算机科学与技术（网络工程方向）
 > 居住地：广州市番禺区（本地人，可接受出差）
-> 期望职位：运维／kai
+> 期望职位：运维／开发／测试／
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzI5ODQxMTIsLTg1ODkyMTUzXX0=
+eyJoaXN0b3J5IjpbMTYzMzEyNTkyMCwtODU4OTIxNTNdfQ==
 -->
