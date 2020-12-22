@@ -16,12 +16,12 @@ permalink: /about/
 > 期望职位：运维／开发／测试／售前
 
 ### 学习\工作 经历
-**2015.9 - 2017.6 &nbsp; &nbsp; &nbsp; 广东机电职业技术学院(大专)**
+**2015.9 - 2017.6 &nbsp; &nbsp; &nbsp; 广东机电职业技术学院(大专) &nbsp; &nbsp; &nbsp; qian ru**
 **2017.8 - 2018.3 &nbsp; &nbsp; &nbsp; 广东乐呗科技有限公司 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 硬件开发**
-> 参与项目：简易版无人机电路设计
-> 简述：负责基于 AVR mega 2560 芯片，四轴无人外围电路PCB（**AD15**），调试姿态控制PID算法（**C/C++**）,硬件选型，d
+> 主要参与项目：简易版无人机设计
+> 简述：负责基于 AVR mega 2560 芯片，四轴无人外围电路PCB（**AD15**），调试姿态控制PID算法（**C/C++**）,硬件选型，电路设计，程序测试，采购，质量品控。
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMzM5MTA2MCwxNjI1NjMyNTQ1LC04NT
-g5MjE1M119
+eyJoaXN0b3J5IjpbLTE0NjA0MjEzNjYsMTYyNTYzMjU0NSwtOD
+U4OTIxNTNdfQ==
 -->
