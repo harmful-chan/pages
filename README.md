@@ -53,8 +53,12 @@ permalink: /about/
 - 容器管理：Docker，k8s
 - 开发平台：.Net Core，Spring Boot，NodeJs，Linux编程，Angular 9
 - 常用云厂商：阿里云，腾讯云，华为云，Ucloud，三丰云
+
+**自评**
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjYzMzA3MjcsLTU5OTgyMzMzOSwxNj
-Y2NjM0NDkxLC0xMjYxMDgwNTk3LDE2MjM1MTUyNTYsMTYyNTYz
-MjU0NSwtODU4OTIxNTNdfQ==
+eyJoaXN0b3J5IjpbLTM4MDgzODA4OSwtMTM2NjMzMDcyNywtNT
+k5ODIzMzM5LDE2NjY2MzQ0OTEsLTEyNjEwODA1OTcsMTYyMzUx
+NTI1NiwxNjI1NjMyNTQ1LC04NTg5MjE1M119
 -->
