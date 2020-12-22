@@ -3,6 +3,10 @@ layout: page
 title: About
 permalink: /about/
 ---
+[联系方式](#1)
+[个人信息](#2)
+[学习/工作 经历](#3)
+
 ## 联系方式
 邮箱：1148706823＠qq.com  
 手机：153 7409 5393    
@@ -46,7 +50,7 @@ permalink: /about/
 > PC端软件升级，机房维护。  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5OTgyMzMzOSwxNjY2NjM0NDkxLC0xMj
-YxMDgwNTk3LDE2MjM1MTUyNTYsMTYyNTYzMjU0NSwtODU4OTIx
-NTNdfQ==
+eyJoaXN0b3J5IjpbODU5MTQ5MDc1LC01OTk4MjMzMzksMTY2Nj
+YzNDQ5MSwtMTI2MTA4MDU5NywxNjIzNTE1MjU2LDE2MjU2MzI1
+NDUsLTg1ODkyMTUzXX0=
 -->
