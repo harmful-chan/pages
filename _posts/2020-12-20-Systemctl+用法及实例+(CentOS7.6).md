@@ -141,27 +141,27 @@ LimitNOFILE：LimitNPROC： 限制特定服务的系统资源量，请看参考
 ```
 #### **[Install]**
 ```ruby
--   WantedBy：Unit 激活时（enable）xxx.service符号链接会放入/etc/systemd/system/xxx.target.wants/目录下面
-        multi-user.target: # 表示多用户命令行状态，这个设置很重要
-        graphical.target:  # 表示图形用户状体，它依赖于multi-user.target
--   RequiredBy：Unit 激活时（enable）xxx.service符号链接会放入/etc/systemd/system/xxx.target.required/目录下面
--   Alias：当前 Unit 可用于启动的别名
--   Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
+WantedBy：Unit 激活时（enable）xxx.service符号链接会放入/etc/systemd/system/xxx.target.wants/目录下面
+    multi-user.target: # 表示多用户命令行状态，这个设置很重要
+    graphical.target:  # 表示图形用户状体，它依赖于multi-user.target
+RequiredBy：Unit 激活时（enable）xxx.service符号链接会放入/etc/systemd/system/xxx.target.required/目录下面
+Alias：当前 Unit 可用于启动的别名
+Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
 ```
 ## **Unit 文件占位符和模板**
 
 #### **占位符**
 在 Unit 文件中，有时会需要使用到一些与运行环境有关的信息，例如节点 ID、运行服务的用户等。这些信息可以使用占位符来表示，然后在实际运行被动态地替换实际的值。
 ```ruby
--   %n：完整的 Unit 文件名字，包括 .service 后缀名
--   %p：Unit 模板文件名中 @ 符号之前的部分，不包括 @ 符号
--   %i：Unit 模板文件名中 @ 符号之后的部分，不包括 @ 符号和 .service 后缀名
--   %t：存放系统运行文件的目录，通常是 “run”
--   %u：运行服务的用户，如果 Unit 文件中没有指定，则默认为 root
--   %U：运行服务的用户 ID
--   %h：运行服务的用户 Home 目录，即 %{HOME} 环境变量的值
--   %s：运行服务的用户默认 Shell 类型，即 %{SHELL} 环境变量的值
--   %m：实际运行节点的 Machine ID，对于运行位置每个的服务比较有用
+%n：完整的 Unit 文件名字，包括 .service 后缀名
+%p：Unit 模板文件名中 @ 符号之前的部分，不包括 @ 符号
+%i：Unit 模板文件名中 @ 符号之后的部分，不包括 @ 符号和.service 后缀名
+%t：存放系统运行文件的目录，通常是 “run”
+%u：运行服务的用户，如果 Unit 文件中没有指定，则默认为 root
+%U：运行服务的用户 ID
+%h：运行服务的用户 Home 目录，即 %{HOME} 环境变量的值
+%s：运行服务的用户默认 Shell 类型，即 %{SHELL} 环境变量的值
+-   %m：实际运行节点的 Machine ID，对于运行位置每个的服务比有用
 -   %b：Boot ID，这是一个随机数，每个节点各不相同，并且每次节点重启时都会改变
 -   %H：实际运行节点的主机名
 -   %v：内核版本，即 “uname -r” 命令输出的内容
@@ -199,11 +199,11 @@ systemctl start apache@8080.service
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125) </br>
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0MjAyOTE0Niw5MjU5OTI5MTUsLTIxMj
-cyNDIwMzAsNzYxMzE0MTk5LC0zODk1MTI0Nyw3MjI4OTM3ODMs
-MTYxNzIyMTU0MiwtMzI2NjA5ODg2LDIwODAzMjgzMjEsLTU3MT
-Q4NjY3MiwtNjQ3MjUxODYwLC0yMDU1NDcxODA5LC0yNDIyNzIz
-NjQsMTIzODU3MDQ0MywxNzk4NDUwOTU0LDMyODEzNDIxMywtMT
-A4MTEzMDQzOSwtMTI5NDYyOTQ5OSwtMTI3NzAxMzYxOCwxMjYx
-NzU2MTg5XX0=
+eyJoaXN0b3J5IjpbLTE2MDUwNTc1ODMsOTI1OTkyOTE1LC0yMT
+I3MjQyMDMwLDc2MTMxNDE5OSwtMzg5NTEyNDcsNzIyODkzNzgz
+LDE2MTcyMjE1NDIsLTMyNjYwOTg4NiwyMDgwMzI4MzIxLC01Nz
+E0ODY2NzIsLTY0NzI1MTg2MCwtMjA1NTQ3MTgwOSwtMjQyMjcy
+MzY0LDEyMzg1NzA0NDMsMTc5ODQ1MDk1NCwzMjgxMzQyMTMsLT
+EwODExMzA0MzksLTEyOTQ2Mjk0OTksLTEyNzcwMTM2MTgsMTI2
+MTc1NjE4OV19
 -->
