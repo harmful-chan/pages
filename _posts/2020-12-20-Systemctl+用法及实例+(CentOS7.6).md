@@ -152,7 +152,7 @@ WantedBy=multi-user.target
 
 #### **占位符**
 在 Unit 文件中，有时会需要使用到一些与运行环境有关的信息，例如节点 ID、运行服务的用户等。这些信息可以使用占位符来表示，然后在实际运行被动态地替换实际的值。
-```shellruby
+```ruby
 -   %n：完整的 Unit 文件名字，包括 .service 后缀名
 -   %p：Unit 模板文件名中 @ 符号之前的部分，不包括 @ 符号
 -   %i：Unit 模板文件名中 @ 符号之后的部分，不包括 @ 符号和 .service 后缀名
@@ -199,7 +199,7 @@ systemctl start apache@8080.service
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125) </br>
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDQ0ODc0NjEsLTIxMjcyNDIwMzAsNz
+eyJoaXN0b3J5IjpbLTE4MDg5NjgyMjksLTIxMjcyNDIwMzAsNz
 YxMzE0MTk5LC0zODk1MTI0Nyw3MjI4OTM3ODMsMTYxNzIyMTU0
 MiwtMzI2NjA5ODg2LDIwODAzMjgzMjEsLTU3MTQ4NjY3MiwtNj
 Q3MjUxODYwLC0yMDU1NDcxODA5LC0yNDIyNzIzNjQsMTIzODU3
