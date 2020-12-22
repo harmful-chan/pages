@@ -55,10 +55,10 @@ permalink: /about/
 - 常用云厂商：阿里云，腾讯云，华为云，Ucloud，三丰云
 
 **自评**
-
+普通打工人 ... 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4MDgzODA4OSwtMTM2NjMzMDcyNywtNT
+eyJoaXN0b3J5IjpbMTAzNDc4NTQ3MywtMTM2NjMzMDcyNywtNT
 k5ODIzMzM5LDE2NjY2MzQ0OTEsLTEyNjEwODA1OTcsMTYyMzUx
 NTI1NiwxNjI1NjMyNTQ1LC04NTg5MjE1M119
 -->
