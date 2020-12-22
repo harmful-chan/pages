@@ -9,21 +9,22 @@ permalink: /about/
 微信：harm01ony（手机同号）    
 
 ### 个人信息
-姓名：**陈汉锋** &nbsp; &nbsp; 性别：男 &nbsp; &nbsp; 出生：1996.11 &nbsp; &nbsp; 年龄：24 
-学历：**全日制本科**(2021.7 毕业)</br> 
-专业：计算机科学与技术（网络工程方向）</br>
-居住地：广州市番禺区（本地人，可接受出差）</br>
-期望职位：运维／开发／测试／售前</br>
+姓名：**陈汉锋** &nbsp; &nbsp; 性别：男 &nbsp; &nbsp; 出生：1996.11 &nbsp; &nbsp; 年龄：24  
+学历：**全日制本科**(2021.7 毕业)   
+专业：计算机科学与技术（网络工程方向)  
+居住地：广州市番禺区（本地人，可接受出差）  
+期望职位：运维／开发／测试／售前  
 
 ### 学习\工作 经历
 2015.9 - 2017.6 &nbsp; &nbsp; &nbsp; **广东机电职业技术学院(大专) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;嵌入式系统工程**
-> **简述**：主要学习，数电，模电，单片机原理，Linux系统移植，Qt，Linux编程，S3C2440，STC89C51，AD15。
+> **简述**：主要学习，数电，模电，单片机原理。  
+> Linux系统移植，Qt，Linux编程，S3C2440，STC89C51，AD15。
 
 2017.8 - 2018.3 &nbsp; &nbsp; &nbsp; 广东乐呗科技有限公司 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; 硬件工程师
-> 主要参与**项目**：简易版无人机设计</br>
-> **简述**：负责基于 AVR mega 2560 芯片，四轴无人外围电路PCB。</br>
-> 调试姿态控制PID算法,硬件选型，电路设计，程序测试，采购，质量品控。</br>
-> **技能**：**C/C++，AD15，Android，JS**</br>
+> 主要参与**项目**：简易版无人机设计  
+> **简述**：负责基于 AVR mega 2560 芯片，四轴无人外围电路PCB。  
+> 调试姿态控制PID算法,硬件选型，电路设计，程序测试，采购，质量品控。  
+> **技能**：**C/C++，AD15，Android，JS**  
 
 2018.4 - 2018.9 &nbsp; &nbsp; &nbsp; 广州和达康明科技有限公司 &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 硬件工程师
 > **简述**：负责公司量产型智能水表硬件测试，编写测试用例，工厂质量把控。</br>
@@ -44,6 +45,6 @@ permalink: /about/
 > 简述：负责维护直播上课时网络的稳定，软硬件问题排查。</br>
 > PC端软件升级，机房维护。</br>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0NDY3MDA0NSwtMTI2MTA4MDU5NywxNj
+eyJoaXN0b3J5IjpbMTY2NjYzNDQ5MSwtMTI2MTA4MDU5NywxNj
 IzNTE1MjU2LDE2MjU2MzI1NDUsLTg1ODkyMTUzXX0=
 -->
