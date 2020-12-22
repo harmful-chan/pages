@@ -53,7 +53,7 @@ permalink: /about/
 容器管理 | docker，k8s  
 常用服务器应用 | nginx，redise，mysql，bind9，ftpd，sshd 等...  
 开发平台 | .Net Core，Spring Boot，NodeJs，Linux编程，Angular 9  
-常用云厂商：阿里云，腾讯云，华为云，Ucloud，三丰云    
+常用云厂商 | 阿里云，腾讯云，华为云，Ucloud，三丰云    
 
 ```shell
 C/C++     ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
@@ -67,7 +67,7 @@ JS        ⭐⭐⭐
 自评  | *普通打工人 ...* 😑  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5MDgyMDA3NCwtMTM2NjMzMDcyNywtNT
-k5ODIzMzM5LDE2NjY2MzQ0OTEsLTEyNjEwODA1OTcsMTYyMzUx
-NTI1NiwxNjI1NjMyNTQ1LC04NTg5MjE1M119
+eyJoaXN0b3J5IjpbODM3ODQ3NDI0LC0xMzY2MzMwNzI3LC01OT
+k4MjMzMzksMTY2NjYzNDQ5MSwtMTI2MTA4MDU5NywxNjIzNTE1
+MjU2LDE2MjU2MzI1NDUsLTg1ODkyMTUzXX0=
 -->
