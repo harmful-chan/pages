@@ -38,8 +38,8 @@ permalink: /about/
 2019.9 - 2021.7 &nbsp; &nbsp; &nbsp; **广东白云学院(全日制本科) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;计算机科学与技术**
 > 简述：主要学习，计算机网络通信技术，网络服务器维护与部署，华为防火墙配置（USG6000），Web应用开发，Android应用开发，Linux系统管理，网络安全。
 
-
+2020.2 - 2020.6 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzM1ODc4NTcsMTYyNTYzMjU0NSwtOD
-U4OTIxNTNdfQ==
+eyJoaXN0b3J5IjpbMjAxNTk0MTI1NCwxNjI1NjMyNTQ1LC04NT
+g5MjE1M119
 -->
