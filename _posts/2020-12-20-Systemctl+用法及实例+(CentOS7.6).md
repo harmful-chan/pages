@@ -56,16 +56,16 @@ WantedBy=multi-user.target
 ## **参数详解**
 #### **[Unit]**
 ```ruby
--   Description：简短描述
--   Documentation：文档地址
--   Requires：当前 Unit 依赖的其他 Unit，如果它们没有运行，当前 Unit 会启动失败
--   Wants：与当前 Unit 配合的其他 Unit，如果它们没有运行，当前 Unit 不会启动失败
--   BindsTo：与Requires类似，它指定的 Unit 如果退出，会导致当前 Unit 停止运行
--   Before：如果该字段指定的 Unit 也要启动，那么必须在当前 Unit 之后启动
--   After：如果该字段指定的 Unit 也要启动，那么必须在当前 Unit 之前启动
--   Conflicts：这里指定的 Unit 不能与当前 Unit 同时运行
--   Condition...：当前 Unit 运行必须满足的条件，否则不会运行
--   Assert...：当前 Unit 运行必须满足的条件，否则会报启动失败
+Description：简短描述
+Documentation：文档地址
+Requires：当前 Unit 依赖的其他 Unit，如果它们没有运行，当前 Unit 会启动失败
+Wants：与当前 Unit 配合的其他 Unit，如果它们没有运行，当前 Unit 不会启动失败
+BindsTo：与Requires类似，它指定的 Unit 如果退出，会导致当前 Unit 停止运行
+Before：如果该字段指定的 Unit 也要启动，那么必须在当前 Unit 之后启动
+After：如果该字段指定的 Unit 也要启动，那么必须在当前 Unit 之前启动
+Conflicts：这里指定的 Unit 不能与当前 Unit 同时运行
+Condition...：当前 Unit 运行必须满足的条件，否则不会运行
+Assert...：当前 Unit 运行必须满足的条件，否则会报启动失败
 
     +-------------------+    +---------------------+
     |After->Condition...| -> |Requires -> Assert...| ->
@@ -76,25 +76,24 @@ WantedBy=multi-user.target
 ```
 #### **[Service]**
 ```ruby
--   Type：定义启动时的进程行为。它有以下几种值。
-        Type=simple：(默认值)启动一个子进程运行命令，用于不会退出的程序
-        Type=forking：fork一个字进程，等待命令完成后退出，多用于后台进程 
-        Type=oneshot：systemctl 等待命令完成再往下执行，像在控制台执行一个命令一样
-        Type=dbus：当前服务通过D-Bus启动
-        Type=notify：当前服务启动完毕，会通知Systemd，再继续往下执行
-        Type=idle：若有其他任务执行完毕，当前服务才会运行
--   PIDFile：存放PID的绝对路径
--   ExecStart：启动当前服务的命令
--   ExecStartPre：启动当前服务之前执行的命令
--   ExecStartPost：启动当前服务之后执行的命令
--   ExecReload：重启当前服务时执行的命令
--   ExecStop：停止当前服务时执行的命令
--   ExecStopPost：停止当其服务之后执行的命令
--   RestartSec：自动重启当前服务间隔的秒数
--   Restart：定义何种情况 Systemd 会自动重启当前服务 
-        no(默认值)： # 退出后无操作
-        on-success:  # 只有正常退出时（退出状态码为0）,才会重启
-        on-failure:  # 非正常退出时，重启，包括被信号终止和超时等
+Type：定义启动时的进程行为。它有以下几种值。
+    Type=simple：(默认值)启动一个子进程运行命令，用于不会退出的程序
+    Type=forking：fork一个字进程，等待命令完成后退出，多用于后台进程 
+    Type=oneshot：systemctl 等待命令完成再往下执行，像在控制台执行一个命令一样
+    Type=dbus：当前服务通过D-Bus启动
+    Type=notify：当前服务启动完毕，会通知Systemd，再继续往下执行
+    Type=idle：若有其他任务执行完毕，当前服务才会运行
+PIDFile：存放PID的绝对路径
+ExecStart：启动当前服务的命令
+ExecStartPre：启动当前服务之前执行的命令
+ExecStartPost：启动当前服务之后执行的命令
+ExecReload：重启当前服务时执行的命令
+ExecStop：停止当前服务时执行的命令
+ExecStopPost：停止当其服务之后执行的命令
+RestartSec：自动重启当前服务间隔的秒数
+Restart：定义何种情况 Systemd 会自动重启当前服务 
+    no(默认值)： # 退出后无操作
+    on-success:  # 只有正常退出时（退出状态码为0）,才会重        on-failure:  # 非正常退出时，重启，包括被信号终止和超时等
         on-abnormal: # 只有被信号终止或超时，才会重启
         on-abort:    # 只有在收到没有捕捉到的信号终止时，才会重启
         on-watchdog: # 超时退出时，才会重启
@@ -199,11 +198,11 @@ systemctl start apache@8080.service
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125) </br>
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI1OTkyOTE1LC0yMTI3MjQyMDMwLDc2MT
-MxNDE5OSwtMzg5NTEyNDcsNzIyODkzNzgzLDE2MTcyMjE1NDIs
-LTMyNjYwOTg4NiwyMDgwMzI4MzIxLC01NzE0ODY2NzIsLTY0Nz
-I1MTg2MCwtMjA1NTQ3MTgwOSwtMjQyMjcyMzY0LDEyMzg1NzA0
-NDMsMTc5ODQ1MDk1NCwzMjgxMzQyMTMsLTEwODExMzA0MzksLT
-EyOTQ2Mjk0OTksLTEyNzcwMTM2MTgsMTI2MTc1NjE4OSwxMjE5
-MjQzOTY1XX0=
+eyJoaXN0b3J5IjpbMTExNDIwNDAwLDkyNTk5MjkxNSwtMjEyNz
+I0MjAzMCw3NjEzMTQxOTksLTM4OTUxMjQ3LDcyMjg5Mzc4Mywx
+NjE3MjIxNTQyLC0zMjY2MDk4ODYsMjA4MDMyODMyMSwtNTcxND
+g2NjcyLC02NDcyNTE4NjAsLTIwNTU0NzE4MDksLTI0MjI3MjM2
+NCwxMjM4NTcwNDQzLDE3OTg0NTA5NTQsMzI4MTM0MjEzLC0xMD
+gxMTMwNDM5LC0xMjk0NjI5NDk5LC0xMjc3MDEzNjE4LDEyNjE3
+NTYxODldfQ==
 -->
