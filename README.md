@@ -9,7 +9,7 @@ permalink: /about/
 微信：harm01ony（手机同号）    
 
 ### 个人信息
-姓名：**陈汉锋** &nbsp; &nbsp; 性别：男 &nbsp; &nbsp; 出生：1996.11 &nbsp; &nbsp; 年龄：24</br>
+姓名：**陈汉锋** &nbsp; &nbsp; 性别：男 &nbsp; &nbsp; 出生：1996.11 &nbsp; &nbsp; 年龄：24 
 学历：**全日制本科**(2021.7 毕业)</br> 
 专业：计算机科学与技术（网络工程方向）</br>
 居住地：广州市番禺区（本地人，可接受出差）</br>
@@ -44,6 +44,6 @@ permalink: /about/
 > 简述：负责维护直播上课时网络的稳定，软硬件问题排查。</br>
 > PC端软件升级，机房维护。</br>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyODg4MTc2OCwtMTI2MTA4MDU5NywxNj
+eyJoaXN0b3J5IjpbMTQ0NDY3MDA0NSwtMTI2MTA4MDU5NywxNj
 IzNTE1MjU2LDE2MjU2MzI1NDUsLTg1ODkyMTUzXX0=
 -->
