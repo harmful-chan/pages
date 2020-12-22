@@ -93,34 +93,35 @@ ExecStopPost：停止当其服务之后执行的命令
 RestartSec：自动重启当前服务间隔的秒数
 Restart：定义何种情况 Systemd 会自动重启当前服务 
     no(默认值)： # 退出后无操作
-    on-success:  # 只有正常退出时（退出状态码为0）,才会重        on-failure:  # 非正常退出时，重启，包括被信号终止和超时等
-        on-abnormal: # 只有被信号终止或超时，才会重启
-        on-abort:    # 只有在收到没有捕捉到的信号终止时，才会重启
-        on-watchdog: # 超时退出时，才会重启
-        always:      # 不管什么退出原因，都会重启（除了systemctl stop）
-        # 对于守护进程，推荐用on-failure
--   KillMode的类型：
-        control-group(默认)：# 当前控制组里的所有子进程，都会被杀掉
-        process: # 只杀主进程
-        mixed:   # 主进程将收到SIGTERM信号，子进程收到SIGKILL信号
-        none:    # 没有进程会被杀掉，只是执行服务的stop命令
--   PrivateTmp=true # 表示给服务分配独立的临时空间
--   TimeoutSec：停止命令执行前等待秒数。
--   TimeoutStartSec：启动命令执行后等待秒数，超时停止。（0 关闭超时检测）
--   TimeoutStopSec：停止命令执行后等待秒数，超时使用 SIGKILL 停止服务。
--   Environment：为服务指定环境变量。
--   EnvironmentFile：环境变量文件，一行一个不要有空格。
--   Nice：进程优先级（默认为0）其中 -20 为最高优先级，19 为最低优先级。
--   WorkingDirectory：指定服务的工作目录，目录不纯在命令不能运行
--   RootDirectory：指定服务进程的根目录（/ 目录）。如果配置了这个参数，服务将无法访问指定目录以外的任何文件
--   User：指定运行服务的用户
--   Group：指定运行服务的用户组
--   MountFlags：服务的 Mount Namespace 配置，会影响进程上下文中挂载点的信息。
-        shared：服务与主机共用一个 Mount Namespace，相互影响
-        slave：服务使用独立的 Mount Namespace，它会继承主机挂载点，操作只有在自己的 Namespace 内生效。
-        private：服务使用独立的 Mount Namespace，它在启动时没有任何任何挂载点，服务对挂载点的操作也不会反映到主机上。
--   LimitCPU：LimitSTACK：\
--   LimitNOFILE：LimitNPROC： 限制特定服务的系统资源量，请看参考
+    on-success:  # 只有正常退出时（退出状态码为0）,才会重启            
+    on-failure:  # 非正常退出时，重启，包括被信号终止和超时等
+    on-abnormal: # 只有被信号终止或超时，才会重启
+    on-abort:    # 只有在收到没有捕捉到的信号终止时，才会重启
+    on-watchdog: # 超时退出时，才会重启
+    always:      # 不管什么退出原因，都会重启（除了systemctl stop）
+    # 对于守护进程，推荐用on-failure
+KillMode的类型：
+    control-group(默认)：# 当前控制组里的所有子进程，都会被杀掉
+    process: # 只杀主进程
+    mixed:   # 主进程将收到SIGTERM信号，子进程收到SIGKILL信号
+    none:    # 没有进程会被杀掉，只是执行服务的stop命令
+PrivateTmp=true # 表示给服务分配独立的临时空间
+TimeoutSec：停止命令执行前等待秒数。
+TimeoutStartSec：启动命令执行后等待秒数，超时停止。（0 关闭超时检测）
+TimeoutStopSec：停止命令执行后等待秒数，超时使用 SIGKILL 停止服务。
+Environment：为服务指定环境变量。
+EnvironmentFile：环境变量文件，一行一个不要有空格。
+Nice：进程优先级（默认为0）其中 -20 为最高优先级，19 为最低优先级。
+WorkingDirectory：指定服务的工作目录，目录不纯在命令不能运行
+RootDirectory：指定服务进程的根目录（/ 目录）。如果配置了这个参数，服务将无法访问指定目录以外的任何文件
+User：指定运行服务的用户
+Group：指定运行服务的用户组
+MountFlags：服务的 Mount Namespace 配置，会影响进程上下文中挂载点的信息。
+    shared：服务与主机共用一个 Mount Namespace，相互影响
+    slave：服务使用独立的 Mount Namespace，它会继承主机挂载点，操作只有在自己的 Namespace 内生效。
+    private：服务使用独立的 Mount Namespace，它在启动时没有任何任何挂载点，服务对挂载点的操作也不会反映到主机上。
+LimitCPU：LimitSTACK：\
+LimitNOFILE：LimitNPROC： 限制特定服务的系统资源量，请看参考
 
     +-----------+    +----+
     |User->Group| -> |Nice| -> 
@@ -198,11 +199,11 @@ systemctl start apache@8080.service
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125) </br>
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExNDIwNDAwLDkyNTk5MjkxNSwtMjEyNz
-I0MjAzMCw3NjEzMTQxOTksLTM4OTUxMjQ3LDcyMjg5Mzc4Mywx
-NjE3MjIxNTQyLC0zMjY2MDk4ODYsMjA4MDMyODMyMSwtNTcxND
-g2NjcyLC02NDcyNTE4NjAsLTIwNTU0NzE4MDksLTI0MjI3MjM2
-NCwxMjM4NTcwNDQzLDE3OTg0NTA5NTQsMzI4MTM0MjEzLC0xMD
-gxMTMwNDM5LC0xMjk0NjI5NDk5LC0xMjc3MDEzNjE4LDEyNjE3
-NTYxODldfQ==
+eyJoaXN0b3J5IjpbLTY0MjAyOTE0Niw5MjU5OTI5MTUsLTIxMj
+cyNDIwMzAsNzYxMzE0MTk5LC0zODk1MTI0Nyw3MjI4OTM3ODMs
+MTYxNzIyMTU0MiwtMzI2NjA5ODg2LDIwODAzMjgzMjEsLTU3MT
+Q4NjY3MiwtNjQ3MjUxODYwLC0yMDU1NDcxODA5LC0yNDIyNzIz
+NjQsMTIzODU3MDQ0MywxNzk4NDUwOTU0LDMyODEzNDIxMywtMT
+A4MTEzMDQzOSwtMTI5NDYyOTQ5OSwtMTI3NzAxMzYxOCwxMjYx
+NzU2MTg5XX0=
 -->
