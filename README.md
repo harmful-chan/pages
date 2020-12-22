@@ -12,7 +12,10 @@ permalink: /about/
 > 学历：**全日制本科** &nbsp; &nbsp; 专业：计算机科学与技术（网络工程方向）
 > 居住地：广州市番禺区（本地人，可接受出差）
 > 期望职位：运维／开发／测试／
-## 
+## 学习\工作 经历
+\
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyNTYzMjU0NSwtODU4OTIxNTNdfQ==
+eyJoaXN0b3J5IjpbMTI3MTA4ODEwNSwxNjI1NjMyNTQ1LC04NT
+g5MjE1M119
 -->
