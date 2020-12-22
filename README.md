@@ -19,9 +19,9 @@ permalink: /about/
 **2015.9 - 2017.6 &nbsp; &nbsp; &nbsp; 广东机电职业技术学院(大专)**
 **2017.8 - 2018.3 &nbsp; &nbsp; &nbsp; 广东乐呗科技有限公司 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 硬件开发**
 > 参与项目：简易版无人机电路设计
-> d
+> 简述：负责使用 AVR mega 2560 芯片，设计无人外围电路PCB，
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc4MDE2MjMyLDE2MjU2MzI1NDUsLTg1OD
-kyMTUzXX0=
+eyJoaXN0b3J5IjpbLTE5MDUwMTE0NDksMTYyNTYzMjU0NSwtOD
+U4OTIxNTNdfQ==
 -->
