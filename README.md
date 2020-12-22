@@ -16,12 +16,10 @@ permalink: /about/
 > 期望职位：运维／开发／测试／售前
 
 ### 学习\工作 经历
-|时间|单位|职务|工作内容|
-|-|-|-|-|
-|2015.9 - 2018.6|广东机电职业技术学院（大专）|团支书|-|
-|2018.7-2019.3|广东乐呗科技有限公司|||
+- 2015.9 - 2018.6|广东机电职业技术学院（大专）|团支书|-|
+|2018.7-2019.3|广东乐呗科技有限公司|硬件开发|简易型无人机电路设计|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwMjI5NzM0MCwxNjI1NjMyNTQ1LC04NT
-g5MjE1M119
+eyJoaXN0b3J5IjpbLTIxMTY4NzQwMDksMTYyNTYzMjU0NSwtOD
+U4OTIxNTNdfQ==
 -->
