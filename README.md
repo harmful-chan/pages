@@ -17,7 +17,7 @@ permalink: /about/
 
 ### 学习\工作 经历
 2015.9 - 2017.6 &nbsp; &nbsp; &nbsp; **广东机电职业技术学院(大专) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;嵌入式系统工程**
-> **简述**：主要学习，数电，模电，单片机原理，Linux系统移植，Qt，Linux编程，S3C2440，STC89C51，AD15
+> **简述**：主要学习，数电，模电，单片机原理，Linux系统移植，Qt，Linux编程，S3C2440，STC89C51，AD15。
 
 2017.8 - 2018.3 &nbsp; &nbsp; &nbsp; 广东乐呗科技有限公司 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; 硬件工程师
 > 主要参与**项目**：简易版无人机设计</br>
@@ -41,9 +41,9 @@ permalink: /about/
 > Linux系统管理，网络安全。</br>
 
 2020.2 - 2020.6 &nbsp; &nbsp; &nbsp;北京学而思教育科技有限公司 &nbsp; &nbsp; &nbsp; &nbsp; 终端维护（兼职）
-> 简述：负责维护直播上课时网络的稳定，软硬件问题排查，装系统。
-> PC端软件升级，机房维护。
+> 简述：负责维护直播上课时网络的稳定，软硬件问题排查。</br>
+> PC端软件升级，机房维护。</br>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyNDYyNjA2LDE2MjM1MTUyNTYsMTYyNT
-YzMjU0NSwtODU4OTIxNTNdfQ==
+eyJoaXN0b3J5IjpbLTEyNjEwODA1OTcsMTYyMzUxNTI1NiwxNj
+I1NjMyNTQ1LC04NTg5MjE1M119
 -->
