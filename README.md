@@ -16,10 +16,11 @@ permalink: /about/
 > 期望职位：运维／开发／测试／售前
 
 ### 学习\工作 经历
-|时间|职务|工作内容|
-|-|-|-|
+|时间|单位|职务|工作内容|
+|-|-|-|-|
+|2015.9 - 2018.6|||
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTk2NTM4MDAsMTYyNTYzMjU0NSwtOD
+eyJoaXN0b3J5IjpbLTE1MzkzODU5NzQsMTYyNTYzMjU0NSwtOD
 U4OTIxNTNdfQ==
 -->
