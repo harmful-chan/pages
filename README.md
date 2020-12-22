@@ -55,7 +55,7 @@ permalink: /about/
 开发平台 | .Net Core，Spring Boot，NodeJs，Linux编程，Angular 9  
 常用云厂商 | 阿里云，腾讯云，华为云，Ucloud，三丰云    
 
-```python
+```ruby
 C/C++     ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
 C#        ⭐⭐⭐⭐⭐⭐⭐⭐
 JAVA      ⭐⭐⭐⭐⭐
@@ -67,7 +67,8 @@ JS        ⭐⭐⭐
 自评  | *普通打工人 ...* 😑  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI4NTAzMjM4LDgzNzg0NzQyNCwtMTM2Nj
-MzMDcyNywtNTk5ODIzMzM5LDE2NjY2MzQ0OTEsLTEyNjEwODA1
-OTcsMTYyMzUxNTI1NiwxNjI1NjMyNTQ1LC04NTg5MjE1M119
+eyJoaXN0b3J5IjpbLTE4NDc3NjMyNTYsOTI4NTAzMjM4LDgzNz
+g0NzQyNCwtMTM2NjMzMDcyNywtNTk5ODIzMzM5LDE2NjY2MzQ0
+OTEsLTEyNjEwODA1OTcsMTYyMzUxNTI1NiwxNjI1NjMyNTQ1LC
+04NTg5MjE1M119
 -->
