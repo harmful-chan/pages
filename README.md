@@ -21,7 +21,9 @@ permalink: /about/
 > 主要参与项目：简易版无人机设计
 > 简述：负责基于 AVR mega 2560 芯片，四轴无人外围电路PCB（**AD15**），调试姿态控制PID算法（**C/C++**）,硬件选型，电路设计，程序测试，采购，质量品控。
 
+2018.4 - 2018.8 &nbsp; &nbsp; &nbsp; 光哦
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5ODU2Nzk0NCwxNjI1NjMyNTQ1LC04NT
-g5MjE1M119
+eyJoaXN0b3J5IjpbLTE2NTg4OTk0OTIsMTYyNTYzMjU0NSwtOD
+U4OTIxNTNdfQ==
 -->
