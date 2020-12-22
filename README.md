@@ -17,6 +17,7 @@ permalink: /about/
 
 ### 学习\工作 经历
 2015.9 - 2017.6 &nbsp; &nbsp; &nbsp; **广东机电职业技术学院(大专) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;嵌入式系统工程**
+> 简述：主要学习，shu dia
 2017.8 - 2018.3 &nbsp; &nbsp; &nbsp; 广东乐呗科技有限公司 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; 硬件工程师
 > 主要参与**项目**：简易版无人机设计
 > **简述**：负责基于 AVR mega 2560 芯片，四轴无人外围电路PCB。
@@ -33,8 +34,8 @@ permalink: /about/
 > 编写产品使用手册。
 > **技能**：**C/C++，Asp.Net，Winform，Wpf**
 
-2019.9 - 2017.6 &nbsp; &nbsp; &nbsp; **广东机电职业技术学院(大专) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;嵌入式系统工程**
+2019.9 - 2021.7 &nbsp; &nbsp; &nbsp; **广东白云学院(全日制本科) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;计算机科学与技术**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0MzIwMjQyOCwxNjI1NjMyNTQ1LC04NT
+eyJoaXN0b3J5IjpbMTM4OTY3MDExOCwxNjI1NjMyNTQ1LC04NT
 g5MjE1M119
 -->
