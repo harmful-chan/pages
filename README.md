@@ -39,8 +39,9 @@ permalink: /about/
 > 简述：主要学习，计算机网络通信技术，网络服务器维护与部署，华为防火墙配置（USG6000），Web应用开发，Android应用开发，Linux系统管理，网络安全。
 
 2020.2 - 2020.6 &nbsp; &nbsp; &nbsp;北京学而思教育科技有限公司 &nbsp; &nbsp; &nbsp; &nbsp; 终端维护（兼职）
-> 简述：负责维护直播上课时网络的稳定，
+> 简述：负责维护直播上课时网络的稳定，软硬件问题排查，装系统。
+> PC端软件升级，机房维护。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0MzE2MjI4NSwxNjIzNTE1MjU2LDE2Mj
-U2MzI1NDUsLTg1ODkyMTUzXX0=
+eyJoaXN0b3J5IjpbLTEzMDc2MTQ2NTAsMTYyMzUxNTI1NiwxNj
+I1NjMyNTQ1LC04NTg5MjE1M119
 -->
