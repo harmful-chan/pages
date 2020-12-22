@@ -18,9 +18,10 @@ permalink: /about/
 ### 学习\工作 经历
 |时间|单位|职务|工作内容|
 |-|-|-|-|
-|2015.9 - 2018.6|||
+|2015.9 - 2018.6|广东机电职业技术学院（大专）|团支书|-|
+|2018.7-2019.3|广东乐呗科技有限公司|||
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzkzODU5NzQsMTYyNTYzMjU0NSwtOD
-U4OTIxNTNdfQ==
+eyJoaXN0b3J5IjpbLTQwMjI5NzM0MCwxNjI1NjMyNTQ1LC04NT
+g5MjE1M119
 -->
