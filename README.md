@@ -49,10 +49,11 @@ permalink: /about/
 
 ## 技能
 - 系统：CentOS7.6，Ubuntu16.04，Windows Server 2012 R2，Raspberry Pi 3b +
-- 系统管理：systemd，busybox，bash，iptable，grep, sed, awk 等...
-- 容器管理：Docker，k8s，
+- 系统管理：systemd，busybox，bash，iptable，grep, sed, awk，ssh 等...
+- 容器管理：Docker，k8s
+- 开发平台：
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM5OTU5ODQ1LC01OTk4MjMzMzksMTY2Nj
-YzNDQ5MSwtMTI2MTA4MDU5NywxNjIzNTE1MjU2LDE2MjU2MzI1
-NDUsLTg1ODkyMTUzXX0=
+eyJoaXN0b3J5IjpbLTEwNjExNjM3MzgsLTU5OTgyMzMzOSwxNj
+Y2NjM0NDkxLC0xMjYxMDgwNTk3LDE2MjM1MTUyNTYsMTYyNTYz
+MjU0NSwtODU4OTIxNTNdfQ==
 -->
