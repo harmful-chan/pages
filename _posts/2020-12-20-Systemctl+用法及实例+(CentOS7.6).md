@@ -56,16 +56,16 @@ WantedBy=multi-user.target
 ## **参数详解**
 #### **[Unit]**
 ```shell
-Description：简短描述
-Documentation：文档地址
-Requires：当前 Unit 依赖的其他 Unit，如果它们没有运行，当前 Unit 会启动失败
-Wants：与当前 Unit 配合的其他 Unit，如果它们没有运行，当前 Unit 不会启动失败
-BindsTo：与Requires类似，它指定的 Unit 如果退出，会导致当前 Unit 停止运行
-Before：如果该字段指定的 Unit 也要启动，那么必须在当前 Unit 之后启动
-After：如果该字段指定的 Unit 也要启动，那么必须在当前 Unit 之前启动
-Conflicts：这里指定的 Unit 不能与当前 Unit 同时运行
-Condition...：当前 Unit 运行必须满足的条件，否则不会运行
-Assert...：当前 Unit 运行必须满足的条件，否则会报启动失败
+-   Description：简短描述
+-   Documentation：文档地址
+-   Requires：当前 Unit 依赖的其他 Unit，如果它们没有运行，当前 Unit 会启动失败
+-   Wants：与当前 Unit 配合的其他 Unit，如果它们没有运行，当前 Unit 不会启动失败
+-   BindsTo：与Requires类似，它指定的 Unit 如果退出，会导致当前 Unit 停止运行
+-   Before：如果该字段指定的 Unit 也要启动，那么必须在当前 Unit 之后启动
+-   After：如果该字段指定的 Unit 也要启动，那么必须在当前 Unit 之前启动
+-   Conflicts：这里指定的 Unit 不能与当前 Unit 同时运行
+-   Condition...：当前 Unit 运行必须满足的条件，否则不会运行
+-   Assert...：当前 Unit 运行必须满足的条件，否则会报启动失败
 
     +-------------------+    +---------------------+
     |After->Condition...| -> |Requires -> Assert...| ->
@@ -76,54 +76,52 @@ Assert...：当前 Unit 运行必须满足的条件，否则会报启动失败
 ```
 #### **[Service]**
 ```shell
-Type：定义启动时的进程行为。它有以下几种值。
-    Type=simple：(默认值)启动一个子进程运行命令，用于不会退出的程序
-    Type=forking：fork一个字进程，等待命令完成后退出，多用于后台进程 
-    Type=oneshot：systemctl 等待命令完成再往下执行，像在控制台执行一个命令一样
-    Type=dbus：当前服务通过D-Bus启动
-    Type=notify：当前服务启动完毕，会通知Systemd，再继续往下执行
-    Type=idle：若有其他任务执行完毕，当前服务才会运行
-PIDFile：存放PID的绝对路径
-ExecStart：启动当前服务的命令
-ExecStartPre：启动当前服务之前执行的命令
-ExecStartPost：启动当前服务之后执行的命令
-ExecReload：重启当前服务时执行的命令
-ExecStop：停止当前服务时执行的命令
-ExecStopPost：停止当其服务之后执行的命令
-RestartSec：自动重启当前服务间隔的秒数
-Restart：定义何种情况 Systemd 会自动重启当前服务 
-    no(默认值)： # 退出后无操作
-    on-success:  # 只有正常退出时（退出状态码为0）,才会重启
-    on-failure:  # 非正常退出时，重启，包括被信号终止和超时等
-    on-abnormal: # 只有被信号终止或超时，才会重启
-    on-abort:    # 只有在收到没有捕捉到的信号终止时，才会重启
-    on-watchdog: # 超时退出时，才会重启
-    always:      # 不管什么退出原因，都会重启（除了systemctl stop）
-    # 对于守护进程，推荐用on-failure
-KillMode的类型：
-    control-group(默认)：# 当前控制组里的所有子进程，都会被杀掉
-    process: # 只杀主进程
-    mixed:   # 主进程将收到SIGTERM信号，子进程收到SIGKILL信号
-    none:    # 没有进程会被杀掉，只是执行服务的stop命令
-PrivateTmp=true # 表示给服务分配独立的临时空间
-TimeoutSec：停止命令执行前等待秒数。
-TimeoutStartSec：启动命令执行后等待秒数，超时停止。（0 关闭超时检测）
-TimeoutStopSec：停止命令执行后等待秒数，超时使用 SIGKILL 停止服务。
-Environment：为服务指定环境变量。
-EnvironmentFile：环境变量文件，一行一个不要有空格。
-Nice：进程优先级（默认为0）其中 -20 为最高优先级，19 为最低优先级。
-WorkingDirectory：指定服务的工作目录，目录不纯在命令不能运行
-RootDirectory：指定服务进程的根目录（/ 目录）。如果配置了这个参数，服务将无法访问指定目录以外的任何文件
-User：指定运行服务的用户
-Group：指定运行服务的用户组
-MountFlags：服务的 Mount Namespace 配置，会影响进程上下文中挂载点的信息。
-    shared：服务与主机共用一个 Mount Namespace，相互影响
-    slave：服务使用独立的 Mount Namespace，它会继承主机挂载点，
-    但服务对挂载点的操作只有在自己的 Namespace 内生效，不会反映到主机上。
-    private：服务使用独立的 Mount Namespace，
-    它在启动时没有任何任何挂载点，服务对挂载点的操作也不会反映到主机上。
-LimitCPU：LimitSTACK：\
-LimitNOFILE：LimitNPROC： 限制特定服务的系统资源量，请看参考
+-   Type：定义启动时的进程行为。它有以下几种值。
+        Type=simple：(默认值)启动一个子进程运行命令，用于不会退出的程序
+        Type=forking：fork一个字进程，等待命令完成后退出，多用于后台进程 
+        Type=oneshot：systemctl 等待命令完成再往下执行，像在控制台执行一个命令一样
+        Type=dbus：当前服务通过D-Bus启动
+        Type=notify：当前服务启动完毕，会通知Systemd，再继续往下执行
+        Type=idle：若有其他任务执行完毕，当前服务才会运行
+-   PIDFile：存放PID的绝对路径
+-   ExecStart：启动当前服务的命令
+-   ExecStartPre：启动当前服务之前执行的命令
+-   ExecStartPost：启动当前服务之后执行的命令
+-   ExecReload：重启当前服务时执行的命令
+-   ExecStop：停止当前服务时执行的命令
+-   ExecStopPost：停止当其服务之后执行的命令
+-   RestartSec：自动重启当前服务间隔的秒数
+-   Restart：定义何种情况 Systemd 会自动重启当前服务 
+        no(默认值)： # 退出后无操作
+        on-success:  # 只有正常退出时（退出状态码为0）,才会重启
+        on-failure:  # 非正常退出时，重启，包括被信号终止和超时等
+        on-abnormal: # 只有被信号终止或超时，才会重启
+        on-abort:    # 只有在收到没有捕捉到的信号终止时，才会重启
+        on-watchdog: # 超时退出时，才会重启
+        always:      # 不管什么退出原因，都会重启（除了systemctl stop）
+        # 对于守护进程，推荐用on-failure
+-   KillMode的类型：
+        control-group(默认)：# 当前控制组里的所有子进程，都会被杀掉
+        process: # 只杀主进程
+        mixed:   # 主进程将收到SIGTERM信号，子进程收到SIGKILL信号
+        none:    # 没有进程会被杀掉，只是执行服务的stop命令
+-   PrivateTmp=true # 表示给服务分配独立的临时空间
+-   TimeoutSec：停止命令执行前等待秒数。
+-   TimeoutStartSec：启动命令执行后等待秒数，超时停止。（0 关闭超时检测）
+-   TimeoutStopSec：停止命令执行后等待秒数，超时使用 SIGKILL 停止服务。
+-   Environment：为服务指定环境变量。
+-   EnvironmentFile：环境变量文件，一行一个不要有空格。
+-   Nice：进程优先级（默认为0）其中 -20 为最高优先级，19 为最低优先级。
+-   WorkingDirectory：指定服务的工作目录，目录不纯在命令不能运行
+-   RootDirectory：指定服务进程的根目录（/ 目录）。如果配置了这个参数，服务将无法访问指定目录以外的任何文件
+-   User：指定运行服务的用户
+-   Group：指定运行服务的用户组
+-   MountFlags：服务的 Mount Namespace 配置，会影响进程上下文中挂载点的信息。
+        shared：服务与主机共用一个 Mount Namespace，相互影响
+        slave：服务使用独立的 Mount Namespace，它会继承主机挂载点，操作只有在自己的 Namespace 内生效。
+        private：服务使用独立的 Mount Namespace，它在启动时没有任何任何挂载点，服务对挂载点的操作也不会反映到主机上。
+-   LimitCPU：LimitSTACK：\
+-   LimitNOFILE：LimitNPROC： 限制特定服务的系统资源量，请看参考
 
     +-----------+    +----+
     |User->Group| -> |Nice| -> 
@@ -143,12 +141,12 @@ LimitNOFILE：LimitNPROC： 限制特定服务的系统资源量，请看参考
 ```
 #### **[Install]**
 ```shell
-WantedBy：Unit 激活时（enable）xxx.service符号链接会放入/etc/systemd/system/xxx.target.wants/目录下面
-    multi-user.target: # 表示多用户命令行状态，这个设置很重要
-    graphical.target:  # 表示图形用户状体，它依赖于multi-user.target
-RequiredBy：Unit 激活时（enable）xxx.service符号链接会放入/etc/systemd/system/xxx.target.required/目录下面
-Alias：当前 Unit 可用于启动的别名
-Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
+-   WantedBy：Unit 激活时（enable）xxx.service符号链接会放入/etc/systemd/system/xxx.target.wants/目录下面
+        multi-user.target: # 表示多用户命令行状态，这个设置很重要
+        graphical.target:  # 表示图形用户状体，它依赖于multi-user.target
+-   RequiredBy：Unit 激活时（enable）xxx.service符号链接会放入/etc/systemd/system/xxx.target.required/目录下面
+-   Alias：当前 Unit 可用于启动的别名
+-   Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit
 ```
 ## **Unit 文件占位符和模板**
 
