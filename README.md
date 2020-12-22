@@ -3,21 +3,21 @@ layout: page
 title: About
 permalink: /about/
 ---
-[联系方式](#1) -> [个人信息](#2) -> [学习/工作 经历](#3)
+[联系方式](#1) # [个人信息](#2) # [学习/工作 经历](#3)  
 
 ## <span id="1">联系方式</span>
 邮箱：1148706823＠qq.com  
 手机：153 7409 5393    
 微信：harm01ony（手机同号）    
 
-## <span id="1">个人信息
+## <span id="2">个人信息</span>
 姓名：**陈汉锋** &nbsp; &nbsp; 性别：男 &nbsp; &nbsp; 出生：1996.11 &nbsp; &nbsp; 年龄：24  
 学历：**全日制本科**(2021.7 毕业)   
 专业：计算机科学与技术（网络工程方向)  
 居住地：广州市番禺区（本地人，可接受出差）  
 期望职位：运维／开发／测试／售前  
 
-## 学习\工作 经历
+## <span id="3">学习\工作 经历<span>
 2015.9 - 2017.6 &nbsp; &nbsp; &nbsp; **广东机电职业技术学院(大专) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;嵌入式系统工程**
 > **简述**：主要学习，数电，模电，单片机原理。  
 > Linux系统移植，Qt，Linux编程，S3C2440，STC89C51，AD15。
@@ -48,7 +48,7 @@ permalink: /about/
 > PC端软件升级，机房维护。  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODg4NjU0OCwtNTk5ODIzMzM5LDE2Nj
-Y2MzQ0OTEsLTEyNjEwODA1OTcsMTYyMzUxNTI1NiwxNjI1NjMy
-NTQ1LC04NTg5MjE1M119
+eyJoaXN0b3J5IjpbNTgyNDUxMzE5LC01OTk4MjMzMzksMTY2Nj
+YzNDQ5MSwtMTI2MTA4MDU5NywxNjIzNTE1MjU2LDE2MjU2MzI1
+NDUsLTg1ODkyMTUzXX0=
 -->
