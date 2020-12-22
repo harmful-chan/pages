@@ -48,11 +48,11 @@ permalink: /about/
 > PC端软件升级，机房维护。  
 
 ## <span id="4"/>技能
-操作系统：CentOS7.6，Ubuntu16.04，Windows Server 2012 R2，Raspberry Pi 3b +  
-系统管理：systemd，busybox，bash，iptable，grep, sed, awk，ssh 等...  
-容器管理：docker，k8s  
-常用服务器应用：nginx，redise，mysql，bind9，ftpd，sshd 等...  
-开发平台：.Net Core，Spring Boot，NodeJs，Linux编程，Angular 9  
+操作系统 | CentOS7.6，Ubuntu16.04，Windows Server 2012 R2，Raspberry Pi 3b +  
+系统管理 | systemd，busybox，bash，iptable，grep, sed, awk，ssh 等...  
+容器管理 | docker，k8s  
+常用服务器应用 | nginx，redise，mysql，bind9，ftpd，sshd 等...  
+开发平台 | .Net Core，Spring Boot，NodeJs，Linux编程，Angular 9  
 常用云厂商：阿里云，腾讯云，华为云，Ucloud，三丰云    
 
 ```shell
@@ -64,11 +64,10 @@ HTML      ⭐⭐⭐⭐
 JS        ⭐⭐⭐
 ```
 
-*自评**  
-*普通打工人 ...*😑  
+自评  | *普通打工人 ...* 😑  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODM4MjU1MzA0LC0xMzY2MzMwNzI3LC01OT
-k4MjMzMzksMTY2NjYzNDQ5MSwtMTI2MTA4MDU5NywxNjIzNTE1
-MjU2LDE2MjU2MzI1NDUsLTg1ODkyMTUzXX0=
+eyJoaXN0b3J5IjpbMTM5MDgyMDA3NCwtMTM2NjMzMDcyNywtNT
+k5ODIzMzM5LDE2NjY2MzQ0OTEsLTEyNjEwODA1OTcsMTYyMzUx
+NTI1NiwxNjI1NjMyNTQ1LC04NTg5MjE1M119
 -->
