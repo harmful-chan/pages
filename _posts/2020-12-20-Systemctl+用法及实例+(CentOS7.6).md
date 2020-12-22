@@ -17,7 +17,7 @@ Systemd 是一系列工具的集合，其作用也远远不仅是启动操作系
 
 ## Quick Start
 **nginx.service**
-```shellruby
+```ruby
 [Unit]
 Description=nginx
 After=network.target 
@@ -33,7 +33,7 @@ WantedBy=multi-user.target
 ```
 
 **code-server.service**
-```shellruby
+```ruby
 [Unit]
 Description=code-server background running.
 After=network.target 
@@ -55,7 +55,7 @@ WantedBy=multi-user.target
 
 ## **参数详解**
 #### **[Unit]**
-```shellruby
+```ruby
 -   Description：简短描述
 -   Documentation：文档地址
 -   Requires：当前 Unit 依赖的其他 Unit，如果它们没有运行，当前 Unit 会启动失败
@@ -75,7 +75,7 @@ WantedBy=multi-user.target
     +-----+    +-------+    +------+
 ```
 #### **[Service]**
-```shellruby
+```ruby
 -   Type：定义启动时的进程行为。它有以下几种值。
         Type=simple：(默认值)启动一个子进程运行命令，用于不会退出的程序
         Type=forking：fork一个字进程，等待命令完成后退出，多用于后台进程 
@@ -140,7 +140,7 @@ WantedBy=multi-user.target
     +--------+    +--------------------------------------------------------+
 ```
 #### **[Install]**
-```shellruby
+```ruby
 -   WantedBy：Unit 激活时（enable）xxx.service符号链接会放入/etc/systemd/system/xxx.target.wants/目录下面
         multi-user.target: # 表示多用户命令行状态，这个设置很重要
         graphical.target:  # 表示图形用户状体，它依赖于multi-user.target
@@ -169,7 +169,7 @@ WantedBy=multi-user.target
 ```
 #### **模板**
 Unit 模板文件的写法与普通的服务 Unit 文件基本相同，不过 Unit 模板的文件名是以 @ 符号结尾的。通过模板启动服务实例时，需要在其文件名的 @ 字符后面附加一个参数字符串。
-```shellruby
+```ruby
 # apache@.service 模板
 [Unit]
 Description=My Advanced Service Template
@@ -191,7 +191,7 @@ WantedBy=multi-user.target
 #### **启动服务**
 在服务启动时需要在 @ 后面放置一个用于区分服务实例的附加字符参数，通常这个参数用于监控的端口号或控制台 TTY 编译号。
 Systemd 在运行服务时，总是会先尝试找到一个完整匹配的 Unit 文件，如果没有找到，才会尝试选择匹配模板。例如上面的命令，System 首先会在约定的目录下寻找名为 apache@8080.service 的文件，如果没有找到，而文件名中包含 @ 字符，它就会尝试去掉后缀参数匹配模板文件。对于 apache@8080.service，systemd 会找到 apache@.service 模板文件，并通过这个模板文件将服务实例化。
-```shellruby
+```ruby
 systemctl start apache@8080.service
 ```
 
@@ -199,11 +199,11 @@ systemctl start apache@8080.service
 [# Systemd 服务管理教程](https://cloud.tencent.com/developer/article/1516125) </br>
 [# Linux systemd资源控制初探](https://www.cnblogs.com/jimbo17/p/9107052.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDg5NjgyMjksLTIxMjcyNDIwMzAsNz
-YxMzE0MTk5LC0zODk1MTI0Nyw3MjI4OTM3ODMsMTYxNzIyMTU0
-MiwtMzI2NjA5ODg2LDIwODAzMjgzMjEsLTU3MTQ4NjY3MiwtNj
-Q3MjUxODYwLC0yMDU1NDcxODA5LC0yNDIyNzIzNjQsMTIzODU3
-MDQ0MywxNzk4NDUwOTU0LDMyODEzNDIxMywtMTA4MTEzMDQzOS
-wtMTI5NDYyOTQ5OSwtMTI3NzAxMzYxOCwxMjYxNzU2MTg5LDEy
-MTkyNDM5NjVdfQ==
+eyJoaXN0b3J5IjpbOTI1OTkyOTE1LC0yMTI3MjQyMDMwLDc2MT
+MxNDE5OSwtMzg5NTEyNDcsNzIyODkzNzgzLDE2MTcyMjE1NDIs
+LTMyNjYwOTg4NiwyMDgwMzI4MzIxLC01NzE0ODY2NzIsLTY0Nz
+I1MTg2MCwtMjA1NTQ3MTgwOSwtMjQyMjcyMzY0LDEyMzg1NzA0
+NDMsMTc5ODQ1MDk1NCwzMjgxMzQyMTMsLTEwODExMzA0MzksLT
+EyOTQ2Mjk0OTksLTEyNzcwMTM2MTgsMTI2MTc1NjE4OSwxMjE5
+MjQzOTY1XX0=
 -->
