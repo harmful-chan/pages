@@ -4,9 +4,9 @@ title: About
 permalink: /about/
 ---
 ### 联系方式
-邮箱：1148706823＠qq.com </br>
-手机：153 7409 5393</br>
-微信：harm01ony（手机同号）</br>
+邮箱：1148706823＠qq.com  
+手机：153 7409 5393    
+微信：harm01ony（手机同号）    
 
 ### 个人信息
 姓名：**陈汉锋** &nbsp; &nbsp; 性别：男 &nbsp; &nbsp; 出生：1996.11 &nbsp; &nbsp; 年龄：24</br>
@@ -44,6 +44,6 @@ permalink: /about/
 > 简述：负责维护直播上课时网络的稳定，软硬件问题排查。</br>
 > PC端软件升级，机房维护。</br>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjEwODA1OTcsMTYyMzUxNTI1NiwxNj
-I1NjMyNTQ1LC04NTg5MjE1M119
+eyJoaXN0b3J5IjpbLTkyODg4MTc2OCwtMTI2MTA4MDU5NywxNj
+IzNTE1MjU2LDE2MjU2MzI1NDUsLTg1ODkyMTUzXX0=
 -->
