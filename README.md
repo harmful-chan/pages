@@ -50,13 +50,16 @@ permalink: /about/
 ## <span id="4"/>技能
 操作系统：CentOS7.6，Ubuntu16.04，Windows Server 2012 R2，Raspberry Pi 3b +
 系统管理：systemd，busybox，bash，iptable，grep, sed, awk，ssh 等...
-容器管理：Docker，k8s
+容器管理：docker，k8s
+服务器应用：nginx，redise
 开发平台：.Net Core，Spring Boot，NodeJs，Linux编程，Angular 9
 常用云厂商：阿里云，腾讯云，华为云，Ucloud，三丰云  
 
 ```shell
 C/C++     ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
-./
+C#        ⭐⭐⭐⭐⭐⭐⭐⭐
+JAVA      ⭐⭐⭐⭐⭐
+
 ```
 
 
@@ -64,7 +67,7 @@ C/C++     ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
 普通打工人 ... 😑
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTQ2NjEwNjYsLTEzNjYzMzA3MjcsLT
-U5OTgyMzMzOSwxNjY2NjM0NDkxLC0xMjYxMDgwNTk3LDE2MjM1
-MTUyNTYsMTYyNTYzMjU0NSwtODU4OTIxNTNdfQ==
+eyJoaXN0b3J5IjpbMTMxNTQ1OTAyOSwtMTM2NjMzMDcyNywtNT
+k5ODIzMzM5LDE2NjY2MzQ0OTEsLTEyNjEwODA1OTcsMTYyMzUx
+NTI1NiwxNjI1NjMyNTQ1LC04NTg5MjE1M119
 -->
