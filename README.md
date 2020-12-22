@@ -28,10 +28,11 @@ permalink: /about/
 > **技能**：**C/C++，AD15，数电，模电，Python3**
 
 2019.4 - 2019.8 &nbsp; &nbsp; &nbsp; 浙江远图互联科技股份有限公司 &nbsp; &nbsp;  &nbsp; &nbsp; 硬件维护
-> 简述：负责维护 全番禺区医院 挂号终端机的软硬件正常运作。
+> **简述**：负责维护 全番禺区医院 挂号终端机的软硬件正常运作。
 > 应用部署升级调试，医院网络排查，上位机驱动调试。
 > 编写产品使用手册。
+> **技能**：**C/C++，.Net，Asp.Net，WI你Pr**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0MDg2NzMyNCwxNjI1NjMyNTQ1LC04NT
+eyJoaXN0b3J5IjpbMjEwNjc3MzkyNiwxNjI1NjMyNTQ1LC04NT
 g5MjE1M119
 -->
