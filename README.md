@@ -31,8 +31,10 @@ permalink: /about/
 > **简述**：负责维护 全番禺区医院 挂号终端机的软硬件正常运作。
 > 应用部署升级调试，医院网络排查，上位机驱动调试。
 > 编写产品使用手册。
-> **技能**：**C/C++，.Net，Asp.Net，WI你Pr**
+> **技能**：**C/C++，Asp.Net，Winform，Wpf**
+
+2019.9 - 2017.6 &nbsp; &nbsp; &nbsp; **广东机电职业技术学院(大专) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;嵌入式系统工程**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwNjc3MzkyNiwxNjI1NjMyNTQ1LC04NT
+eyJoaXN0b3J5IjpbLTI0MzIwMjQyOCwxNjI1NjMyNTQ1LC04NT
 g5MjE1M119
 -->
