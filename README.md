@@ -9,8 +9,9 @@ permalink: /about/
 - 微信：harm01ony（手机同号）
 ## 个人信息
 > 姓名：**陈汉锋** &nbsp; &nbsp; 性别：男 &nbsp; &nbsp; 出生：1996.11 &nbsp; &nbsp; 年龄：24
-> 学历：**全日制本科** &nbsp; &nbsp; d
+> 学历：**全日制本科** &nbsp; &nbsp; 专业：计算机科学与技术（网络工程方向）
+> 
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDgxNTQ3MTEsLTg1ODkyMTUzXX0=
+eyJoaXN0b3J5IjpbLTE4NTE1OTg2MTQsLTg1ODkyMTUzXX0=
 -->
