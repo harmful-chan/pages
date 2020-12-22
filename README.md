@@ -48,9 +48,10 @@ permalink: /about/
 > PC端软件升级，机房维护。  
 
 ## 技能
-- 系统：CentOS7.6，Ubuntu16.04，Windows SRaspberry Pi 3b +
+- 系统：CentOS7.6，Ubuntu16.04，Windows Server 2012 R2，Raspberry Pi 3b +
+- 系统工具：iptable，ssh，curl，busybox，
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyOTUxNTkzMywtNTk5ODIzMzM5LDE2Nj
+eyJoaXN0b3J5IjpbLTY5MTU2ODA5NiwtNTk5ODIzMzM5LDE2Nj
 Y2MzQ0OTEsLTEyNjEwODA1OTcsMTYyMzUxNTI1NiwxNjI1NjMy
 NTQ1LC04NTg5MjE1M119
 -->
