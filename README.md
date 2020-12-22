@@ -49,9 +49,10 @@ permalink: /about/
 
 ## 技能
 - 系统：CentOS7.6，Ubuntu16.04，Windows Server 2012 R2，Raspberry Pi 3b +
-- 系统工具：systemd，busybox，bash，
+- 系统基础：systemd，busybox，bash，iptable，linux系统编程
+- 容器管理：Docker，k8s，
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxOTE5NjUyMiwtNTk5ODIzMzM5LDE2Nj
+eyJoaXN0b3J5IjpbMjExNDU5Mzc2NSwtNTk5ODIzMzM5LDE2Nj
 Y2MzQ0OTEsLTEyNjEwODA1OTcsMTYyMzUxNTI1NiwxNjI1NjMy
 NTQ1LC04NTg5MjE1M119
 -->
