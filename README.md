@@ -25,8 +25,8 @@ permalink: /about/
 > 简述：负责公司量产型智能水表硬件测试，编写测试用例，工厂质量把控
 
 2019.4 - 2019.8 &nbsp; &nbsp; &nbsp; 浙江远图互联科技股份有限公司 &nbsp; &nbsp;  &nbsp; &nbsp; 硬件维护
-> 简述：负责 全番禺区 医院挂号终端的软硬件正常运作。</br>
+> 简述：负责 全番禺区 医院挂号终端的软硬件正常运作。</br>应用部署升级调试，上位机驱动调试。产品
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5NjkyNzg0MiwxNjI1NjMyNTQ1LC04NT
-g5MjE1M119
+eyJoaXN0b3J5IjpbMzMwNzEyMTU4LDE2MjU2MzI1NDUsLTg1OD
+kyMTUzXX0=
 -->
