@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Thingsboard (一) 编译运行(CentOS7.6)
+title: Thingsboard (一) 编译运行(CentOS7.6) 
 date: 2020-12-19 19:20:23 +0900
 category: Thingsboard
 ---
 ## Quick Start
-```shell
+**安装 java nodejs maven 代码**
+```ruby
 # 安装java 1.8 openjdk
 yum install -y java-1.8.0-openjdk-devel
 ＃ 安装 maven 3.6.3
@@ -22,6 +23,11 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 nvm install node
 # 拉源码
 git clone https://github.com/thingsboard/thingsboard.git
+```
+**编译**
+```ruby
+# 安装前段工具
+npm install -g cross-env webpack gulp
 # 删除 license 信息， 在每个文件开头都有一段的
 cd thingsboard
 git checkout release-3.2
@@ -29,10 +35,6 @@ mvn license:remove
 # 注释掉license插件
 sed -i '675a\<!--' pom.xml
 sed -i '738a\-->' pom.xml
-```
 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExMTE5NTc1Niw5MzI0Njg3NjAsLTEwNT
-I4NDA3OTksMTQyODc1NTczNywtMTI2MTE0MjgwOCwxMzczMjI5
-MDYwXX0=
--->
+mvn clean install -DskipTests -X //跳过编译测试文件，编译DEBUGE版，linux加上sudo
+```
