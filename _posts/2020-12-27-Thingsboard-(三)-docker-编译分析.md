@@ -1,10 +1,15 @@
 ---
 layout: post
-title: Thingsboard (二) docker 运行分析
-date: 2020-12-18 19:20:23 +0900
+title: Thingsboard (三) docker 编译分析
+date: 2020-12-27 19:20:23 +0900
 category: Thingsboard
 ---
-## 启动过程详解
+
+## 前言  
+按照官方文档执行`./docker-install-tb.sh`默认是从docker hub拉取thingsboard的官方镜像的，若要docker运行自己修改完的代码，需要自己获取一个docker仓库和修改代理里的`pom.xml`。  
+本文使用阿里云仓库，且docker tag按照：`registry.cn-qingdao.aliyuncs.com/{空间名}/harthb:{镜像名}_vx.x.x.`(x.x.x为版本号)。  
+ 
+## Quick Start
 Github：https://github.com/thingsboard/thingsboard/blob/release-3.2/docker/README.md
 
 **创建日志文件夹**  
