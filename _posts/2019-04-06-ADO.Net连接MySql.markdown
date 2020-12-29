@@ -2,7 +2,7 @@
 layout: post
 title:  "ADO.Net Connect MySql"
 date:   2020-04-06 19:31:29 +0900
-categories: MySql5.7 .Net
+categories: MySql5.7
 ---
 ## ADO.NET Mysql VS2017插件、驱动 
 插件 [提取码：w5ib ](https://pan.baidu.com/s/1bNm8e20hZU6cnU0H7CzHnQ )  
