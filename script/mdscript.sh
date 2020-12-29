@@ -1,4 +1,7 @@
 #!/bin/bash
+# v1.0.1
+# append '--clean' remove $CACHE, by default not remove.
+# update '-l' not show index informations.
 # v1.0.0
 # excrat ``` content from markdown file.
 # example :
@@ -23,12 +26,15 @@ function getRawEndLines()
 while [ -n "$1" ]
 do
 	case $1 in
-	--list|-l|ls) # show all or unique index
+	--clean)
+		rm -f $CACHE
+		;;
+	--list|-l) # show all or unique index
 		shift
 		sl=($(getRawStartLines $CACHE))
 		el=($(getRawEndLines $CACHE))
 		if [ "$1" -gt -1 ] 2>/dev/null ; then
-			echo -e "\033[32m[SHELL]\033[0m $1"
+		#	echo -e "\033[32m[SHELL]\033[0m $1"
 			sed -n "$((${sl[0]}+1)),$((${el[0]}-1))p" $CACHE
 		else
 			count=0
@@ -43,18 +49,20 @@ do
 		;;
 	--file|-f) # markdown file path.
 		shift
+		$CLEAN
 		cp -f $1 $CACHE
 		;;
 	--url|-u) # github file raw url.
 		shift
+		$CLEAN
 		echo -e "\033[34m[INFO] \033[0mdownload ${1#*_posts/}... to $CACHE"
 		wget -c $1 -O $CACHE >/dev/null 2>&1
 		echo -e "\033[34m[INFO] \033[0mdownload finish."
 		;;
 	*)
+		echo -e "\033[31m[ERROR] \033[0m [$1] cmd not find."
 		;;
 	esac
 	shift
 done
 
-rm -f $CACHE
