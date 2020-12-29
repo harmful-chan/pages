@@ -1,4 +1,6 @@
 #!/bin/bash
+# v1.0.2
+# update '-l' optimized display.
 # v1.0.1
 # append '--clean' remove $CACHE, by default not remove.
 # update '-l' not show index informations.
@@ -13,15 +15,6 @@
 
 CACHE=.mdcache
 
-function getRawStartLines()
-{
-	echo $( grep -n '```ruby' $1 | awk -F ':' '{ printf $1 " " }' )
-}
-function getRawEndLines()
-{
-	echo $( grep -n '```' $1| grep -v '```ruby' | awk -F ':' '{ printf $1 " " }' )
-}
-
 
 while [ -n "$1" ]
 do
@@ -31,32 +24,32 @@ do
 		;;
 	--list|-l) # show all or unique index
 		shift
-		sl=($(getRawStartLines $CACHE))
-		el=($(getRawEndLines $CACHE))
+		sh=($( grep '```' $CACHE | sed -n '1~2p' ))
+		sl=($( grep -n '```' $CACHE | cut -f1 -d':' | sed -n '1~2p' ))
+		el=($( grep -n '```' $CACHE | cut -f1 -d':' | sed -n '2~2p' ))
 		if [ "$1" -gt -1 ] 2>/dev/null ; then
-		#	echo -e "\033[32m[SHELL]\033[0m $1"
 			sed -n "$((${sl[0]}+1)),$((${el[0]}-1))p" $CACHE
 		else
 			count=0
 			for (( i=0; i < ${#sl[@]}; i++ ))
 			do
-				echo -e "\033[32m[SHELL]\033[0m $((count++))"
+				echo -e "\033[32m[script] $((count++)) [${sh[i]##*'`'}] \033[0m"
 				sed -n "$((${sl[i]}+1)),$((${el[i]}-1))p" $CACHE | head -n8
-				echo '... ... ...'
+				echo '...'
 			done
 			continue
 		fi
 		;;
 	--file|-f) # markdown file path.
 		shift
-		$CLEAN
+		rm -f $CACHE
 		cp -f $1 $CACHE
 		;;
 	--url|-u) # github file raw url.
 		shift
-		$CLEAN
+		rm -f $CACHE
 		echo -e "\033[34m[INFO] \033[0mdownload ${1#*_posts/}... to $CACHE"
-		wget -c $1 -O $CACHE >/dev/null 2>&1
+		wget -c $1 -O $CACHE 
 		echo -e "\033[34m[INFO] \033[0mdownload finish."
 		;;
 	*)
