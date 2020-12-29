@@ -9,7 +9,7 @@ category: Thingsboard
 ```ruby
 # 安装java 1.8 openjdk
 yum install -y java-1.8.0-openjdk-devel
-＃ 安装 maven 3.6.3
+# 安装 maven 3.6.3
 wget https://apache.website-solution.net/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
 tar -xvf apache-maven-3.6.3-bin.tar.gz
 cp -rf apache-maven-3.6.3 /usr/local/
@@ -18,8 +18,8 @@ source /etc/profile ＃ 刷新环境变量
 # 安装 nodejs，以下步骤先翻墙哦
 # 安装 nvm
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-＃ 重新进入终端环境变量才生效
-＃ 安装nodejs
+# 重新进入终端环境变量才生效
+# 安装nodejs
 nvm install node
 # 拉源码
 git clone https://github.com/thingsboard/thingsboard.git
