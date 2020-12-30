@@ -1,8 +1,8 @@
 ---
 layout: post
-title: CentOS7.6 shadowsocksR 客户端配置
+title: shadowsocksR 客户端配置 (CentOS7.6)
 date: 2020-12-21 12:20:23 +0900
-category: CentOS7.6
+category: VPN
 ---
 ## 前言
 shadowsocks(ss)、shadowsocksr(ssr)、是凉个不同的软件，我的onecat只支持ssr或者kitsunebi,所以我才选择用ssr.
