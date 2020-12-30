@@ -2,7 +2,7 @@
 layout: post
 title: Windows Server 2012 R2 搭建PPTP服务器
 date: 2020-03-23 19:20:23 +0900
-category: WindowsServer
+category: PPTP
 ---
 
 ## vpn服务器架设
