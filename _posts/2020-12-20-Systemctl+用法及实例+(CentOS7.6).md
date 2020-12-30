@@ -2,7 +2,7 @@
 layout: post
 title: Systemctl 用法及实例(CentOS7.6)
 date: 2020-12-20 12:20:23 +0900
-category: CentOS7.6
+category: systemd
 ---
 ## 前言
 Systemd 是一系列工具的集合，其作用也远远不仅是启动操作系统，它还接管了后台服务、结束、状态查询，以及日志归档、设备管理、电源管理、定时任务等许多职责，并支持通过特定事件（如插入特定 USB 设备）和特定端口数据触发的 On-demand（按需）任务。
