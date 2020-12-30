@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Windows Server 2012 R2 搭建PPTP服务器
+title: 搭建PPTP服务器 (Windows Server 2012 R2)
 date: 2020-03-23 19:20:23 +0900
 category: PPTP
 ---
