@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ionic 远程开发调试(CentOS7.6)
+title: Ionic 远程开发调试 (CentOS7.6)
 date: 2020-12-18 19:20:23 +0900
 category: Ionic
 ---
