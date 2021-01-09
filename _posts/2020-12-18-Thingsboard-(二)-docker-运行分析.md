@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Thingsboard (二) docker 运行分析"
-subtitle: "centos7.6"
+subtitle: "Centos 7.6"
 author: "harmful-chan"
 header-mask: 0.5
 catalog: true

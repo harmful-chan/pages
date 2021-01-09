@@ -1,8 +1,12 @@
 ---
 layout: post
-title: Thingsboard (一) 编译运行(CentOS7.6) 
-date: 2020-12-19 19:20:23 +0900
-category: Thingsboard
+title: "Thingsboard (一) 编译运行"
+subtitle: "Centos 7.6"
+author: "harmful-chan"
+header-mask: 0.5
+catalog: true
+tags: 
+  - thingsboard
 ---
 ## Quick Start
 **安装 java nodejs maven 代码**

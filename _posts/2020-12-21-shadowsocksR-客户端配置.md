@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ShadowsocksR 客户端配置"
-subtitle: "centos7.6"
+subtitle: "Centos 7.6"
 author: "harmful-chan"
 header-mask: 0.5
 catalog: true
