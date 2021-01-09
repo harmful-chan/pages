@@ -1,8 +1,12 @@
 ---
 layout: post
-title: Ionic 远程开发调试 (CentOS7.6)
-date: 2020-12-18 19:20:23 +0900
-category: Ionic
+title: "Ionic远程开发调试"
+subtitle: "centos7.6"
+author: "harmful-chan"
+header-mask: 0.5
+catalog: true
+tags: 
+  - ionic
 ---
 最近项目要写个Android程序，我是打算用Ionic + Cordova + Android 混合开发。主要是想学下前端界面怎样写可以快点和不想用java写android。本片大概会讲完如何用`centos7.6搭一个Ionic远程开发环境`和`远程真机调试Android程序`和`VSCode远程开发`。
 

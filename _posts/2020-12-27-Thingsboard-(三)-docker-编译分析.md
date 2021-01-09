@@ -1,8 +1,12 @@
 ---
 layout: post
-title: Thingsboard (三) docker 编译分析
-date: 2020-12-27 19:20:23 +0900
-category: Thingsboard
+title: "Thingsboard (三) docker 编译分析"
+subtitle: "CentOS 7.6"
+author: "harmful-chan"
+header-mask: 0.5
+catalog: true
+tags: 
+  - thingsboard
 ---
 
 ## 前言  

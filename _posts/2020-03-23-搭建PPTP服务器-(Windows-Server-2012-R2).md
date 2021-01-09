@@ -1,8 +1,13 @@
 ---
 layout: post
-title: 搭建PPTP服务器 (Windows Server 2012 R2)
-date: 2020-03-23 19:20:23 +0900
-category: PPTP
+title: "搭建PPTP服务器"
+subtitle: "windows server 2012 r2"
+author: "harmful-chan"
+header-mask: 0.5
+catalog: true
+tags: 
+  - pptp
+  - "windows server"
 ---
 
 ## vpn服务器架设
@@ -86,8 +91,3 @@ category: PPTP
 ![](http://www.cnblogs.com/d/file/news/20190605/20170509221905983.png)
 
 这样就完成配置了。
-
-**注：创建用户的时候可以指定用户静态IP，但是要注意不能是地址池起始IP，不然会不求作用。  而且IP也不能超过池最后一个IP，不然也不生效。若系统开启防火墙，需开启47和1723端口，并通过外网映射这两个端口即可.**
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbODg2OTA1MjA4XX0=
--->

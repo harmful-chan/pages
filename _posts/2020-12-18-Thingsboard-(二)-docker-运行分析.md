@@ -1,8 +1,12 @@
 ---
 layout: post
-title: Thingsboard (二) docker 运行分析
-date: 2020-12-18 19:20:23 +0900
-category: Thingsboard
+title: "Thingsboard (二) docker 运行分析"
+subtitle: "centos7.6"
+author: "harmful-chan"
+header-mask: 0.5
+catalog: true
+tags: 
+  - thingsboard
 ---
 ## 启动过程详解
 Github：https://github.com/thingsboard/thingsboard/blob/release-3.2/docker/README.md

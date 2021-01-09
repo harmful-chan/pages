@@ -1,8 +1,12 @@
 ---
 layout: post
-title: TP LINK WDR6500 V2 刷OpenWRT 18.06.2 搭建PPTP服务器
-date: 2020-12-18 19:20:23 +0900
-category: OpenWRT
+title: "TP LINK WDR6500 V2 刷OpenWRT 18.06.2 搭建PPTP服务器"
+subtitle: "openwrt"
+author: "harmful-chan"
+header-mask: 0.5
+catalog: true
+tags: 
+  - openwrt
 ---
 ## 硬件资料
 
