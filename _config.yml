@@ -11,6 +11,9 @@ url: "https://harmful-chan.github.io"              # your host, for absolute URL
 baseurl: "/summary"  # for example, '/blog' if your blog hosted on 'host/blog'
 
 
+# static file url
+res_url: img.hfzs.store
+
 # avatar and Favicon
 # avatar: http://7u2ho6.com1.z0.glb.clouddn.com/site-avatar.png
 favicon: favicon.ico
