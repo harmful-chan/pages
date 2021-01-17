@@ -37,7 +37,8 @@ append
         -l -- list 显示.md文件内```之间的内容
         --clean -- 清楚缓存目录 $HOME/.mdscript
     [help] -- 显示本节内同
-    [quickstart] -- 显示上一节内容  
+    [use] -- 显示上一节内容  
+	[clean] -- remove $HOME/.mdcache
 ```
 
 
