@@ -1,17 +1,6 @@
 #!/bin/bash
-# v1.0.2
-# update '-l' optimized display.
-# v1.0.1
-# append '--clean' remove $CACHE, by default not remove.
-# update '-l' not show index informations.
-# v1.0.0
-# excrat ``` content from markdown file.
-# example :
-# 	./mdscript -f test.md -l    # show test.md all script
-# 	./mdscript -f test.md -l 0    # show the first scrip from test.md 
-# 	
-# 	# show all script from web file. sure url already urlencode 
-#	./mdscript -u https://github.com/harmful-chan/summary/xxx.md -l    
+# v1.1.0
+
 tmp_dir=${HOME}/.mdcache
 cache=${tmp_dir}/cache.md
 post_dir=${tmp_dir}/post
