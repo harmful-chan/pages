@@ -8,37 +8,17 @@ catalog: true
 tags: [ shell ]
 ---
 ## QuickStart
-```quickstar
-# !/bin/bash
-# # # # # # # # # # mdscript quickstart # # # # # # # # # # 
-# 添加别名 
-alias mdspt='bash ${pwd}/mdscript.sh'
-
-# 在当前目录创建一个.md博客文件，
-# 并添加标题[file name]，子标题[sub title]，第一个标签[tag1]
-mdspt create 'file name' 'sub title' 'tag1' 'tag2' ... 
-
-# 显示所有博客文件
-# 从远端拉取文件放在 $HOAM/.mdscript/post 中
-mdspt show -a
-
-# 查看缓存目录中文章内的所有的脚本 '```'内的内容
-mdspt show -f 1 -l # 1 为文章索引 -a 可以看到
-
-# 查看详细脚本 
-mdspt show -f 1 -l 0 # 0 为脚本索引，在每个脚本开头都有显示
-
-# 查看指定.md脚本内容
-mdspt show -f ../myblogs.md -l [0]    # -f 能指定文件目录
-
-# 查看远程.md脚本内容
-mdspt show -u 'https://github.com/harmful-chan/summary/raw/gh-pages-green/_posts/2020-03-23-%E6%90%AD%E5%BB%BAPPTP%E6%9C%8D%E5%8A%A1%E5%99%A8.md' -l [0]
-
-# 清除缓存
-mdspt show --clean
-
-# 查看帮助
-mdspt help
+```shell
+alias mdspt='bash ${pwd}/mdscript.sh'        #添加别名 
+mdspt create 'file name' 'subtitle' 'tag1'   # create new .md file in current dir
+mdspt show -a                                # show all .md fil
+mdspt show -f 1 -l                           # show all script content -f [file index] 
+mdspt show -f 1 -l 0                         # show specified script content -l [script index]
+mdspt show -f ../myblogs.md -l [0]           # use local file -f [file path]
+mdspt show -u 'https://github.com/..a.md' -l # use remote file
+mdspt clean                                  # remove $HOME/.mdcache
+mdspt help                                   # sricpt help
+mdspt use                                    # current document
 
 ## 注意：-a -u -f等 会在本地生成缓存，若查看同一个文档 可以 
 mdspt show -l [0] <=> mdspt show -f ${HOME}/.mdcache/cache -l 0
@@ -46,8 +26,7 @@ mdspt show -l [0] <=> mdspt show -f ${HOME}/.mdcache/cache -l 0
 
 
 ## Help
-```help
-# # # # # # # # # # mdscript help # # # # # # # # # # 
+```
 append 
     [create] -- 添加博客文档生成功能
     [show]  -- 原有功能
@@ -65,7 +44,6 @@ append
 
 ## ChangeLog
 ```shell
-# !/bin/bash
 # # # # # # # # # # # # # # # # # # #ChangeLog # # # # # # # # # # # # # # #
 # v1.1.0
 # 版本跟新：把帮组文档独立出来，较大改动
