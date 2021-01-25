@@ -47,11 +47,12 @@ append
 ## ChangeLog
 ```shell
 # # # # # # # # # # # # # # # # # # #ChangeLog # # # # # # # # # # # # # # #
+# v1.1.1
+# append 'update' command that can download news posts in the $post_dir.
 # v1.1.0
 # 版本跟新：把帮组文档独立出来，较大改动
 # 把整个仓库_posts下的文件放在 $HOME/.mdcache/post 下用于操作
 # 修改内容显示函数，支持种类型的脚本，会在开头显示
-
 # v1.0.2
 # update '-l' optimized display.
 # v1.0.1
