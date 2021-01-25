@@ -9,7 +9,7 @@ tags: [ shell ]
 ---
 ## QuickStart
 ```shell
-alias mdspt='bash ${pwd}/mdscript.sh'        #添加别名 
+alias mdspt='bash ${pwd}/mdscript.sh'        # 添加别名 
 mdspt create 'file name' 'subtitle' 'tag1'   # create new .md file in current dir
 mdspt show -a                                # show all .md fil
 mdspt show -f 1 -l                           # show all script content -f [file index] 
@@ -39,6 +39,7 @@ append
     [help] -- 显示本节内同
     [use] -- 显示上一节内容  
 	[clean] -- remove $HOME/.mdcache
+	[update] -- remove $HOME/.mdcache/post and update post directory.
 ```
 
 
