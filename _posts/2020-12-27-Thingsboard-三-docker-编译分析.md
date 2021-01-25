@@ -1,8 +1,8 @@
----
+r--
 layout: post
 title: "Thingsboard (三) docker 编译分析"
 subtitle: "CentOS 7.6"
-author: "harmful-chan"
+ruthor: "harmful-chan"
 header-mask: 0.5
 catalog: true
 tags: 
