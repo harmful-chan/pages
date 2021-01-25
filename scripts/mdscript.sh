@@ -1,10 +1,10 @@
 #!/bin/bash
-# v1.1.0
+# v1.1.1
 
 tmp_dir=${HOME}/.mdcache
 cache=${tmp_dir}/cache.md
 post_dir=${tmp_dir}/post
-TYPE=
+type=
 
 function info() 
 {
@@ -22,7 +22,14 @@ function script()
 {
 	echo -e "\033[32m[ SCRIPT] $2 \033[0m\033[33m $1 \033[0m"
 }
-
+function progress()
+{
+	printf "$*"
+}
+function progress_done()
+{
+	printf "\033[32mdone\033[0m"
+}
 function script_content()
 {
     array=( $(sed -n '/^```/=' $2) )
@@ -34,11 +41,11 @@ function script_content()
 }
 
 
-function update_cache_dir()
+function update_post_dir()
 {
     if [ ! -d $post_dir ]; then
 		info 'download posts ...'
-		git clone --depth=1 https://github.com/harmful-chan/summary.git  -b gh-pages-green
+		git clone --depth=1 https://github.com/harmful-chan/summary.git  -b main
 		mkdir -p $post_dir
 		mv  summary/_posts/* $post_dir
 		rm -rf summary/
@@ -59,7 +66,7 @@ function show_md()
 				start_line=($( grep '```' $cache | sed -n '1~2p' ))
 				for (( i=0; i < ${#start_line[@]}; i++ ))
 				do
-					if [ -n "$TYPE" ] && [ "$TYPE" != "${start_line[i]##*'`'}" ]; then
+					if [ -n "$type" ] && [ "$type" != "${start_line[i]##*'`'}" ]; then
 					    continue
 					fi
 				    script "$i" "${start_line[i]##*'`'}" 
@@ -85,7 +92,7 @@ function show_md()
 			;;
 		-t)
 			shift
-			TYPE=$1
+			type=$1
 			;;
 		-u) # github file raw url.
 			shift
@@ -93,7 +100,7 @@ function show_md()
 			curl -s -L $1 -o $cache
 			;;
 		-a)	
-		    update_cache_dir
+		    update_post_dir
 			files=$(ls $post_dir)
 			i=1
 			for line in $files
@@ -127,7 +134,7 @@ EOF
 }
 
 if [ -n "$1" ]; then
-    update_cache_dir
+    update_post_dir
 case $1 in
 create)
 	shift
@@ -149,6 +156,11 @@ help)
 clean)
     info "remove $tmp_dir"
     rm -rf $tmp_dir
+    ;;
+update)
+    info "update $post_dir"
+	rm -rf $post_dir
+	update_post_dir
     ;;
 *)
 	error "command [$1] not find. " 
