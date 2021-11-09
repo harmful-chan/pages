@@ -22,7 +22,7 @@ favicon: favicon.ico
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Universal Developer"
-sidebar-avatar: https://harmful-chan.github.io/summary/img/avatar.png      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: https://harfol.github.io/summary/img/avatar.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
