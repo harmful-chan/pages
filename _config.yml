@@ -64,3 +64,5 @@ friends: [
     href: "https://chenshuyao.cn/"
   }
 ]
+
+theme: jekyll-theme-cayman
