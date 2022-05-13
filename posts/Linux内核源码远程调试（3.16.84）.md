@@ -24,17 +24,24 @@ tags:
 ## Qiuck Start
 ### 运行release版内核
 ```shell
-# 升级库
+# 安装必要组件 CentOS 7.6
 yum -y install epel-release && yum clean all && yum makecache
 # 安装模拟器 gcc gdb
 yum -y install qemu gcc make
-# 下载linux内核源码
-wget http://ftp.sjtu.edu.cn/sites/ftp.kernel.org/pub/linux/kernel/v3.x/linux-3.18.84.tar.xz
 # 安装编译依赖库
 yum -y install  glibc glibc-utils glibc-devel
+# 安装必要组件 Ubuntu 18.04 安装前更新阿里源
+sudo apt install libncurses5-dev openssl libssl-dev build-essential pkg-config libc6-dev bison flex libelf-dev zlibc minizip libidn11-dev libidn11
+# 下载linux内核源码
+wget http://ftp.sjtu.edu.cn/sites/ftp.kernel.org/pub/linux/kernel/v3.x/linux-3.18.84.tar.xz
 # 编译内核
 make x86_64_defconfig && make -j2
-# 写测试程序
+
+```
+### 运行hello wold
+
+```shell
+# 写测试程序 运行hello
 mkdir hello && cat <<-EOF > hello/hello.c
 #include "stdio.h"
 int main()
@@ -52,10 +59,102 @@ yum -y install glibc-static
 gcc -o hello/init hello/hello.c -pthread -static
 find hello/init | cpio -o -Hnewc | gzip -9 > rootfs.img
 # 模拟器启动内核
-＃ qemu-system-x86_64 -kernel linux-3.16.84/arch/x86/boot/bzImage\  
--initrd hello/rootfs.img -nographic --append "console=ttyS0"
+qemu-system-x86_64 -kernel linux-3.16.84/arch/x86/boot/bzImage -initrd hello/rootfs.img -nographic --append "console=ttyS0"
 ```
+
+### 运行busybox
+
+```shell
+# 配置linux支持 ram disk
+# General setup  --->
+# 	[*] Initial RAM filesystem and RAM disk (initramfs/initrd) support
+# Device Drivers  --->
+#	[*] Block devices  --->
+#		<*>   RAM block device support
+#		(65536) Default RAM disk size (kbytes) 
+# 下载解压源码
+wget https://busybox.net/downloads/busybox-1.30.0.tar.bz2 && tar -xvf busybox-1.30.0.tar.bz2
+# 配置生成静态库
+# Busybox Settings  --->
+#	Build Options  --->
+#		[*] Build BusyBox as a static binary (no shared libs)
+make menuconfig
+make && make install
+# 进入busybox-1.30.0/_install
+sudo bash busybox_init.sh
+# 进入busybox-1.30.0
+sudo bash busybox_build.sh
+# 运行linux启动busybox
+qemu-system-x86_64 \
+  -kernel ./linux-4.12/arch/x86_64/boot/bzImage  \
+  -initrd ./busybox-1.30.0/rootfs.img.gz   \
+  -append "root=/dev/ram init=/linuxrc"  \
+  -nographic --append "nokaslr console=ttyS0" -s   #输出到当前cosole
+  # -serial file:output.txt    # 输出到文件
+```
+
+### busy_init.sh
+
+```shell
+#!/bin/bash
+set -e
+mkdir etc dev mnt
+mkdir -p proc sys tmp mnt
+mkdir -p etc/init.d/
+
+echo "config etc/fstab."
+cat >etc/fstab <<-EOF
+proc        /proc           proc         defaults        0        0
+tmpfs       /tmp            tmpfs    　　defaults        0        0
+sysfs       /sys            sysfs        defaults        0        0
+EOF
+
+echo "config etc/init.d/rcS."
+cat >etc/init.d/rcS <<-EOF
+echo -e "Welcome to tinyLinux"
+/bin/mount -a
+echo -e "Remounting the root filesystem"
+mount  -o  remount,rw  /
+mkdir -p /dev/pts
+mount -t devpts devpts /dev/pts
+echo /sbin/mdev > /proc/sys/kernel/hotplug
+mdev -s
+EOF
+chmod 755 etc/init.d/rcS
+
+echo "config etc/inittab."
+cat  >etc/inittab <<-EOF
+::sysinit:/etc/init.d/rcS
+::respawn:-/bin/sh
+::askfirst:-/bin/sh
+::ctrlaltdel:/bin/umount -a -r
+EOF
+chmod 755 etc/inittab
+cd dev
+mknod console c 5 1
+mknod null c 1 3
+mknod tty1 c 4 1 
+cd -
+```
+
+### busybox_build.sh
+
+```shell
+#!/bin/bash
+set -e
+rm -rf rootfs.ext3
+rm -rf fs
+dd if=/dev/zero of=./rootfs.ext3 bs=1M count=32
+mkfs.ext3 rootfs.ext3
+mkdir fs
+mount -o loop rootfs.ext3 ./fs
+cp -rf ./_install/* ./fs
+umount ./fs
+gzip --best -c rootfs.ext3 > rootfs.img.gz
+```
+
 ### 运行debug版内核
+
 ```ruby
 # 交互的库
 yum -y install ncurses-devel
@@ -99,8 +198,7 @@ make install
 ＃ 终端 1
 gdb linux-3.16.84/vmlinux
 ＃ 终端 2
-qemu-system-x86_64 -kernel linux-3.16.84/arch/x86/boot/bzImage\  
--initr d hello/rootfs.img -nographic --append "console=ttyS0" -s -S
+qemu-system-x86_64 -kernel linux-3.16.84/arch/x86/boot/bzImage -initr d hello/rootfs.img -nographic --append " nokaslr console=ttyS0" -s -S
 ```
 
 
