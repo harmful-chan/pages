@@ -1,13 +1,5 @@
----
-layout: post
-title: "mysql基础（5.7）"
-platform: "Windows 10"
-author: "harmful-chan"
-date: "2019-01-01 17:10"
-tags: 
-  - mysql
----
-## 用户管理命令 
+## 1. 安装部署
+
 **启动/暂停 Mysql 服务**  
 `# net start/stop mysql `  
 **登陆数据库**  

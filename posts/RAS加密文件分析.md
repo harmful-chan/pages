@@ -1,46 +1,40 @@
----
-layout: post
-title:  "RAS加密文件分析"
-platform: "CentOS 7.6"
-author: "harmful-chan"
-date: "2021-01-07 17:10"
-tags: 
-  - ssl
----
+## 概述
+
 对于 X.509 标准的证书有两种不同编码格式,一般采用 PEM 编码就以 .pem 作为文件扩展名，
 若采用 DER 编码，就应以 .der 作为扩展名。但常见的证书扩展名还包括 .crt、.cer、.p12 等，
 他们采用的编码格式可能不同，内容也有所差别，但大多数都能互相转换。 
 
-## 密钥格式及编码<span id="10"/>
-**x.509**：公钥证书标准，就是一个整数里面要包含什么内容；  
-**RSA**：非对称加密算法，可以用于对文本加密，常用 1024 4086 位；  
-**ASN.1**：抽象语法标记，描述了一种对数据进行表示、编码、传输和解码的数据格式；  
-**PKCS**（The Public-Key Cryptography Standards）：是一系列公钥密码学的相关标准；  
-**PKCS#1**（RSA Cryptography Standard）：定义了RSA公钥和私钥的语法格式；  
-**PKCS#8**（Private-Key Information Syntax Standard）：定义了一种私钥信息的语法，同时还提供一种加密密钥的语法；  
-**DER编码**：把符合ASN.1语法的密钥或证书文件输出为二进制文件;  
-**PEM编码**：把DER编码后的二进制数据用Base64进行编码，输出文本数据再加上开始和结束行， 
+####  密钥格式及编码
++ **x.509**：公钥证书标准，就是一个整数里面要包含什么内容；  
++ **RSA**：非对称加密算法，可以用于对文本加密，常用 1024 4086 位；  
++ **ASN.1**：抽象语法标记，描述了一种对数据进行表示、编码、传输和解码的数据格式；  
++ **PKCS**（The Public-Key Cryptography Standards）：是一系列公钥密码学的相关标准；  
++ **PKCS#1**（RSA Cryptography Standard）：定义了RSA公钥和私钥的语法格式；  
++ **PKCS#8**（Private-Key Information Syntax Standard）：定义了一种私钥信息的语法，同时还提供一种加密密钥的语法；  
++ **DER编码**：把符合ASN.1语法的密钥或证书文件输出为二进制文件;  
++ **PEM编码**：把DER编码后的二进制数据用Base64进行编码，输出文本数据再加上开始和结束行， 
 如证书文件的"-----BEGIN CERTIFICATE-----“和”-----END CERTIFICATE-----";  
 
 
-## 证书的几种扩展名<span id="20"/>
-**.pem**: 采用 PEM 编码格式的 X.509 证书的文件扩展名；    
-**.der**：采用 DER 编码格式的 X.509 证书的文件扩展名；    
-**.crt**(certificate)：证书格式，常见于类 UNIX 系统，PEM 或 DER 编码，大多数采用 PEM 编码；  
-**.cer**(certificate)：证书格式，常见于 Windows 系统，同样地，PEM 或 DER 编码，大多数采用 DER 编码；  
-**.p12**(.pfx)：加密标准，PKCS #12，是公钥加密标准（Public Key Cryptography Standards，PKCS）系列的一种，
+####  证书的几种扩展名
++ **.pem**: 采用 PEM 编码格式的 X.509 证书的文件扩展名；    
++ **.der**：采用 DER 编码格式的 X.509 证书的文件扩展名；    
++ **.crt**(certificate)：证书格式，常见于类 UNIX 系统，PEM 或 DER 编码，大多数采用 PEM 编码；  
++ **.cer**(certificate)：证书格式，常见于 Windows 系统，同样地，PEM 或 DER 编码，大多数采用 DER 编码；  
++ **.p12**(.pfx)：加密标准，PKCS #12，是公钥加密标准（Public Key Cryptography Standards，PKCS）系列的一种，
 包含对应 X.509 证书和证书对应的私钥。简单理解：一份 .p12 文件 = X.509 证书+私钥；  
-**.csr**(Certificate Signing Request)：证书签名请求，它并不是证书的格式，向CA申请证书用，
++ **.csr**(Certificate Signing Request)：证书签名请求，它并不是证书的格式，向CA申请证书用，
 包含一个 RSA 公钥和其他附带信息，在生成这个 .csr 申请的时候，同时也会生成一个配对 RSA 私钥。  
-**.key**：通常用来存放一个 RSA 公钥或者私钥，它并非 X.509 证书格式，编码同样可能是 PEM，也可能是 DER，查看方式如下：
-```
++ **.key**：通常用来存放一个 RSA 公钥或者私钥，它并非 X.509 证书格式，编码同样可能是 PEM，也可能是 DER，查看方式如下：
+
+```shell
 PEM 编码格式：openssl rsa -in xxx.key -text -noout 
 DER 编码格式：openssl rsa -in xxx.key -text -noout -inform der
 ```
 
 ## PKCS#1 格式  
 包含一系列数据，可以从从导出私钥和公钥，怎么生成我是看不懂的...
-#### 密钥
+#### 密钥格式
 ```example
 # PKCS#1 格式 密钥数据结构
 RSAPrivateKey ::= SEQUENCE 
@@ -64,9 +58,12 @@ OtherPrimeInfo ::= SEQUENCE
   coefficient INTEGER -- ti 
 }
 ```
+
+
 利用openssl生成，pkcs#1格式，pem编码的密钥文件 prikey.pkcs1.pem  
 `openssl genrsa -out prikey.pkcs1.pem`  
-```example
+
+```shell
 # cat prikey.pkcs1.pem
 -----BEGIN RSA PRIVATE KEY-----
 MIICWwIBAAKBgQC2FKCULiab15n1BD6QvFz382kt4GsDvuOM5tmYeZD7l8MucSyP
@@ -75,9 +72,12 @@ pPORFyaWGoKI+pTwAKKbDy2epqq7WtYxOfqA1AzU1mNsk6XRTBHa2XzuSF+/0rXY
 j78p2hP4dnYPVbpCZCdrXNMWl+7hmrKfXNB7PvPAe0fQctUno7WElS37qwIDAQAB
 -----END RSA PRIVATE KEY-----
 ```
+
+
 文件是base64打码的，可以利用工具解码  
 `openssl rsa -inform PEM -outform DER -in prikey.pkcs1.pem -out prikey.pkcs1.der`  
 得到的.der文件就是按照pkcs#1格式的密钥的二进制输出  
+
 ```example
 # xxd prike.pkcs#1.der
 0000000: 3082 025b 0201 0002 8181 00f0 7f55 6009  0..[.........U`.
@@ -86,8 +86,11 @@ j78p2hP4dnYPVbpCZCdrXNMWl+7hmrKfXNB7PvPAe0fQctUno7WElS37qwIDAQAB
 0000030: 499d 3ffb 31a2 b72e 8256 81f7 9eec cbc4  I.?.1....V......
 ...
 ```
+
+
 直接二进制没啥用，用opnssl可以查看各字段信息
 `openssl asn1parse -i -in prikey.pkcs1.pem`  
+
 ```example
 # cat prikey.pkcs1.pem
   0:d=0  hl=4 l= 603 cons: SEQUENCE
@@ -100,20 +103,24 @@ j78p2hP4dnYPVbpCZCdrXNMWl+7hmrKfXNB7PvPAe0fQctUno7WElS37qwIDAQAB
 409:d=1  hl=2 l=  64 prim:  INTEGER :1EDA40A4ACFABF37E9DBFC283BC...C80E4DCC71258D2BC0FFFC7390B43864E1BF2105104BA701                                                                         
 475:d=1  hl=2 l=  64 prim:  INTEGER :A1D672959574D1...62CFAFB6A7FE42C90DDBDBEE147D749445BA7EE5802B76E7C8A4B55D9FC181D62773                                                                           541:d=1  hl=2 l=  64 prim:  INTEGER :7AC9618673B62E277A8FB...D83C21460E2A6BEE
 ```
-**左半部分**  
-`0:d=0  hl=4 l= 603 cons: SEQUENCE`  
-0 表示节点在整个文件中的偏移长度  
-d=0 表示节点深度   
-hl=4 表示节点头字节长度  
-l=603 表示节点数据字节长度  
-cons 表示该节点为结构节点，表示包含子节点或者子结构数据  
-prim 表示该节点为原始节点，包含数据  
-OCTET STRING      [HEX DUMP]，就是加密后的私钥数据。
-// SEQUENCE、OCTETSTRING等都是ASN.1中定义的数据类型，具体可以参考ASN.1格式说明。  
-**右半部分**  
-参照上两段的格式可以一一对应各字段的值，本文不涉及rsa编解码运算所以知道证书构成就好啦，毕竟俺也不会...
-也有另一种查看方法
+
+**左半部分**   `0:d=0  hl=4 l= 603 cons: SEQUENCE`  
+
++ 0 表示节点在整个文件中的偏移长度  
++ d=0 表示节点深度   
++ hl=4 表示节点头字节长度  
++ l=603 表示节点数据字节长度  
++ cons 表示该节点为结构节点，表示包含子节点或者子结构数据  
+    prim 表示该节点为原始节点，包含数据  
++ OCTET STRING      [HEX DUMP]，就是加密后的私钥数据。
+    // SEQUENCE、OCTETSTRING等都是ASN.1中定义的数据类型，具体可以参考ASN.1格式说明。  
+
+**右半部分**      
+
+参照上两段的格式可以一一对应各字段的值，本文不涉及rsa编解码运算所以知道证书构成就好啦，毕竟俺也不会...，也有另一种查看方法 
+
 `openssl rsa -text -noout -in prikey.pkcs1.pem`  
+
 ```example
 # cat prikey.pkcs1.pem
 Private-Key: (1024 bit)
@@ -133,7 +140,7 @@ privateExponent:
     ...
 ```
 大体上输出内容差不多。
-#### 公钥
+#### 公钥格式
 ```
 # PKCS#1 公钥数据结构
 RSAPublicKey ::= SEQUENCE 
@@ -160,9 +167,9 @@ Eh2dg9VukJkJ2tc0xaX7uGasp9c0Hs+88B7R9By1SejtYSVLfurAgMBAAE=
   3:d=1  hl=3 l= 129 prim:  INTEGER           :B614A0942E269BD799...D527A3B584952DFBA
 135:d=1  hl=2 l=   3 prim:  INTEGER           :010001
 ```
-## PKCS#8 格式<span id="60"/>
+## PKCS#8 格式
 操作及查看方法与上文相似，简单介绍他们的机构和生成方式 
-#### 私钥<span id="70"/>
+#### 私钥格式
 ```example
 # PKCS#8 密钥 数据结构
 PrivateKeyInfo ::= SEQUENCE 
@@ -174,8 +181,11 @@ PrivateKeyInfo ::= SEQUENCE
 } 
 ```
 把 pkcs1私钥 转换成 pkcs8私钥  
+
 `openssl pkcs8 -topk8 -in prikey.pkcs1.pem -out prikey.pkcs8.pem -nocrypt`
+
 `openssl asn1parse -i -in prikey.pkcs8.pem`  
+
 ```example
 # cat prikey.pkcs8.pem
 # 要靠缩进开区分是哪一组信息，所以要排好看一点 
@@ -195,7 +205,7 @@ PrivateKeyInfo ::= SEQUENCE
 C94F34F0CFF56B3E92D437C49559B1BD6 ... 87948FD5C7526D569BB8  
 ```
 
-#### 公钥<span id="80"/>
+#### 公钥格式
 从 pkck1私钥 导出 pkcs8公钥
 `openssl rsa  -in prikey.pkcs1.pem  -pubout -out pubkey.pkcs8.pem`  
 与私钥部分相识，查看各字段的值
@@ -236,7 +246,7 @@ e0fQctUno7WElS37qwIDAQAB
 #1私 转 #8公：`openssl rsa -in prikey.pkcs1.pem -out pubkey.pkcs8.pem -pubout`
 ```
 
-## 参考<span id="100"/>
+## 参考
 [# 秘钥/证书/https握手/CA相关概念](https://www.jianshu.com/p/ef06507269c0)  
 [# 使用openssl命令剖析RSA私钥文件格式](https://blog.csdn.net/Zhymax/article/details/7683925)  
 [# RSA公私钥格式分析及其在Java和Openssl之间的转换方法](https://blog.csdn.net/yaoyuanyylyy/article/details/89739176)  
